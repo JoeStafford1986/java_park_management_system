@@ -1,4 +1,6 @@
-public class Feed {
+import Interfaces.IEadable;
+
+public class Feed implements IEadable {
     private boolean plant_based;
 
     public Feed(boolean plant_based) {
