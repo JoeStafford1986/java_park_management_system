@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/park_management_system.iml" filepath="$PROJECT_DIR$/.idea/modules/park_management_system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/park_management_system_main.iml" filepath="$PROJECT_DIR$/.idea/modules/park_management_system_main.iml" group="park_management_system" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/park_management_system_test.iml" filepath="$PROJECT_DIR$/.idea/modules/park_management_system_test.iml" group="park_management_system" />
     </modules>
   </component>
 </project>
