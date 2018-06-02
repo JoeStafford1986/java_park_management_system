@@ -16,4 +16,12 @@ public class Dinosaur {
     public DietType getDiet() {
         return this.diet;
     }
+
+    public int getStomachCount() {
+        return this.stomach.size();
+    }
+
+    public void eat(IEadable feed) {
+        this.stomach.add(feed);
+    }
 }
