@@ -6,34 +6,110 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class DinosaurTest {
-    private Dinosaur dinosaur;
+    private Dinosaur omnivoreDinosaur;
+    private Dinosaur herbivoreDinosaur;
+    private Dinosaur carnivoreDinosaur;
+    private Feed plantBasedFeed;
+    private Feed nonPlantBasedFeed;
+    private IEadable plantBasedIEadable;
+    private IEadable nonPlantBasedIEadable;
 
     @Before
     public void dinosaur() {
-        dinosaur = new Dinosaur(DietType.OMNIVORE);
+        omnivoreDinosaur = new Dinosaur(DietType.OMNIVORE);
+        herbivoreDinosaur = new Dinosaur(DietType.HERBIVORE);
+        carnivoreDinosaur = new Dinosaur(DietType.CARNIVORE);
+        plantBasedFeed = new Feed(true);
+        nonPlantBasedFeed = new Feed(false);
+        plantBasedIEadable = new Feed(true);
+        nonPlantBasedIEadable = new Feed(false);
     }
 
     @Test
-    public void canGetDiet() {
-        assertEquals(DietType.OMNIVORE, dinosaur.getDiet());
+    public void canGetOmnivoreDiet() {
+        assertEquals(DietType.OMNIVORE, omnivoreDinosaur.getDiet());
     }
 
     @Test
     public void checkStomachStartsEmpty() {
-        assertEquals(0, dinosaur.getStomachCount());
+        assertEquals(0, omnivoreDinosaur.getStomachCount());
+    }
+
+    //Omnivore Feeding Tests
+
+    @Test
+    public void canAddPlantBasedFeedToOmnivoreStomach() {
+        omnivoreDinosaur.eat(plantBasedFeed);
+        assertEquals(1, omnivoreDinosaur.getStomachCount());
     }
 
     @Test
-    public void canAddFeedToStomach() {
-        Feed feed = new Feed(true);
-        dinosaur.eat(feed);
-        assertEquals(1, dinosaur.getStomachCount());
+    public void canAddNonPlantBasedFeedToOmnivoreStomach() {
+        omnivoreDinosaur.eat(nonPlantBasedFeed);
+        assertEquals(1, omnivoreDinosaur.getStomachCount());
     }
 
     @Test
-    public void canAddIEadableToStomach() {
-        IEadable feed = new Feed(true);
-        dinosaur.eat(feed);
-        assertEquals(1, dinosaur.getStomachCount());
+    public void canAddPlantBasedIEadableToOmnivoreStomach() {
+        omnivoreDinosaur.eat(plantBasedIEadable);
+        assertEquals(1, omnivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void canAddNonPlantBasedIEadableToOmnivoreStomach() {
+        omnivoreDinosaur.eat(nonPlantBasedIEadable);
+        assertEquals(1, omnivoreDinosaur.getStomachCount());
+    }
+
+    //Herbivore Feeding tests
+
+    @Test
+    public void canAddPlantBasedFeedToHerbivoreStomach() {
+        herbivoreDinosaur.eat(plantBasedFeed);
+        assertEquals(1, herbivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void cannotAddNonPlantBasedFeedToHerbivoreStomach() {
+        herbivoreDinosaur.eat(nonPlantBasedFeed);
+        assertEquals(0, herbivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void canAddPlantBasedIEadableToHerbivoreStomach() {
+        herbivoreDinosaur.eat(plantBasedIEadable);
+        assertEquals(1, herbivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void cannotAddNonPlantBasedIEadableToHerbivoreStomach() {
+        herbivoreDinosaur.eat(nonPlantBasedIEadable);
+        assertEquals(0, herbivoreDinosaur.getStomachCount());
+    }
+
+    //Carnivore Feeding tests
+
+    @Test
+    public void cannotAddPlantBasedFeedToCarnivoreStomach() {
+        carnivoreDinosaur.eat(plantBasedFeed);
+        assertEquals(0, carnivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void canAddNonPlantBasedFeedToCarnivoreStomach() {
+        carnivoreDinosaur.eat(nonPlantBasedFeed);
+        assertEquals(1, carnivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void cannotAddPlantBasedIEadableToCarnivoreStomach() {
+        carnivoreDinosaur.eat(plantBasedIEadable);
+        assertEquals(0, carnivoreDinosaur.getStomachCount());
+    }
+
+    @Test
+    public void canAddNonPlantBasedIEadableToCarnivoreStomach() {
+        carnivoreDinosaur.eat(nonPlantBasedIEadable);
+        assertEquals(1, carnivoreDinosaur.getStomachCount());
     }
 }

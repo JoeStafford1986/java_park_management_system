@@ -22,6 +22,9 @@ public class Dinosaur {
     }
 
     public void eat(IEadable feed) {
+        if ((this.getDiet() == DietType.CARNIVORE && feed.checkPlantBased() == true) || (this.getDiet() == DietType.HERBIVORE && feed.checkPlantBased() == false)) {
+            return;
+        }
         this.stomach.add(feed);
     }
 }
