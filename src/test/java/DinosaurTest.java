@@ -30,6 +30,18 @@ public class DinosaurTest {
         assertEquals(DietType.OMNIVORE, omnivoreDinosaur.getDiet());
     }
 
+    //DietType Tests
+
+    @Test
+    public void canGetHerbivoreDiet() {
+        assertEquals(DietType.HERBIVORE, herbivoreDinosaur.getDiet());
+    }
+
+    @Test
+    public void canGetCarnivoreDiet() {
+        assertEquals(DietType.CARNIVORE, carnivoreDinosaur.getDiet());
+    }
+
     @Test
     public void checkStomachStartsEmpty() {
         assertEquals(0, omnivoreDinosaur.getStomachCount());
