@@ -1,3 +1,4 @@
+import Dinosaurs.Terrestrial;
 import Enums.DietType;
 import org.junit.Before;
 import org.junit.Test;
@@ -6,16 +7,16 @@ import static org.junit.Assert.assertEquals;
 
 public class PaddockTest {
     private Paddock paddock;
-    private Dinosaur carnivoreDinosaur;
-    private Dinosaur herbivoreDinosaur;
-    private Dinosaur omnivoreDinosaur;
+    private Terrestrial omnivoreTerrestial;
+    private Terrestrial herbivoreTerrestial;
+    private Terrestrial carnivoreTerrestial;
 
     @Before
     public void before() {
         paddock = new Paddock();
-        carnivoreDinosaur = new Dinosaur(DietType.CARNIVORE);
-        herbivoreDinosaur = new Dinosaur(DietType.HERBIVORE);
-        omnivoreDinosaur = new Dinosaur(DietType.OMNIVORE);
+        omnivoreTerrestial = new Terrestrial("Gallimimus", DietType.OMNIVORE);
+        herbivoreTerrestial = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
+        carnivoreTerrestial = new Terrestrial("Velociraptor", DietType.CARNIVORE);
     }
 
     @Test
@@ -26,116 +27,116 @@ public class PaddockTest {
     //Adding Carnivore Tests
 
     @Test
-    public void canAddCarnivoreDinosaur() {
-        paddock.addDinosaur(carnivoreDinosaur);
+    public void canAddCarnivoreTerrestial() {
+        paddock.addDinosaur(carnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddCarnivoreDinosaurDueToHerbivore() {
-        paddock.addDinosaur(herbivoreDinosaur);
-        paddock.addDinosaur(carnivoreDinosaur);
+    public void cannotAddCarnivoreTerrestialDueToHerbivore() {
+        paddock.addDinosaur(herbivoreTerrestial);
+        paddock.addDinosaur(carnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddCarnivoreDinosaurDueToOmnivore() {
-        paddock.addDinosaur(omnivoreDinosaur);
-        paddock.addDinosaur(carnivoreDinosaur);
+    public void cannotAddCarnivoreTerrestialDueToOmnivore() {
+        paddock.addDinosaur(omnivoreTerrestial);
+        paddock.addDinosaur(carnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddCarnivoreDinosaurDueToCarnivore() {
-        paddock.addDinosaur(carnivoreDinosaur);
-        paddock.addDinosaur(carnivoreDinosaur);
+    public void cannotAddCarnivoreTerrestialDueToCarnivore() {
+        paddock.addDinosaur(carnivoreTerrestial);
+        paddock.addDinosaur(carnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     //Adding Omnivore Tests
 
     @Test
-    public void canAddOmnivoreDinosaur() {
-        paddock.addDinosaur(omnivoreDinosaur);
+    public void canAddOmnivoreTerrestial() {
+        paddock.addDinosaur(omnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddOmnivoreDinosaurDueToHerbivore() {
-        paddock.addDinosaur(herbivoreDinosaur);
-        paddock.addDinosaur(omnivoreDinosaur);
+    public void cannotAddOmnivoreTerrestialDueToHerbivore() {
+        paddock.addDinosaur(herbivoreTerrestial);
+        paddock.addDinosaur(omnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddOmnivoreDinosaurDueToOmnivore() {
-        paddock.addDinosaur(omnivoreDinosaur);
-        paddock.addDinosaur(omnivoreDinosaur);
+    public void cannotAddOmnivoreTerrestialDueToOmnivore() {
+        paddock.addDinosaur(omnivoreTerrestial);
+        paddock.addDinosaur(omnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddOmnivoreDinosaurDueToCarnivore() {
-        paddock.addDinosaur(carnivoreDinosaur);
-        paddock.addDinosaur(omnivoreDinosaur);
+    public void cannotAddOmnivoreTerrestialDueToCarnivore() {
+        paddock.addDinosaur(carnivoreTerrestial);
+        paddock.addDinosaur(omnivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     //Adding Herbivore Tests
 
     @Test
-    public void canAddHerbivoreDinosaur() {
-        paddock.addDinosaur(herbivoreDinosaur);
+    public void canAddHerbivoreTerrestial() {
+        paddock.addDinosaur(herbivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void canAddMultipleHerbivore() {
-        paddock.addDinosaur(herbivoreDinosaur);
-        paddock.addDinosaur(herbivoreDinosaur);
+    public void canAddMultipleHerbivoreTerrestials() {
+        paddock.addDinosaur(herbivoreTerrestial);
+        paddock.addDinosaur(herbivoreTerrestial);
         assertEquals(2, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddHerbivoreDueToOmnivore() {
-        paddock.addDinosaur(omnivoreDinosaur);
-        paddock.addDinosaur(herbivoreDinosaur);
+    public void cannotAddHerbivoreTerrestialDueToOmnivoreTerrestial() {
+        paddock.addDinosaur(omnivoreTerrestial);
+        paddock.addDinosaur(herbivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     @Test
-    public void cannotAddHerbivoreDueToCarnivore() {
-        paddock.addDinosaur(carnivoreDinosaur);
-        paddock.addDinosaur(herbivoreDinosaur);
+    public void cannotAddHerbivoreTerrestialDueToCarnivoreTerrestial() {
+        paddock.addDinosaur(carnivoreTerrestial);
+        paddock.addDinosaur(herbivoreTerrestial);
         assertEquals(1, paddock.getDinosaursCount());
     }
 
     //Check for Omnivores/Carnivores
 
     @Test
-    public void canCheckForCarnivoresInPaddockTrue() {
-        paddock.addDinosaur(carnivoreDinosaur);
+    public void canCheckForCarnivoreTerrestialsInPaddockTrue() {
+        paddock.addDinosaur(carnivoreTerrestial);
         assertEquals(true, paddock.checkForCarnivoresAndOmnivores());
     }
 
     @Test
-    public void canCheckForOmnivoresInPaddockTrue() {
-        paddock.addDinosaur(omnivoreDinosaur);
+    public void canCheckForOmnivoreTerrestialsInPaddockTrue() {
+        paddock.addDinosaur(omnivoreTerrestial);
         assertEquals(true, paddock.checkForCarnivoresAndOmnivores());
     }
 
     @Test
-    public void canCheckForCarnivoresAndOmnivoresInPaddockFalse() {
-        paddock.addDinosaur(herbivoreDinosaur);
+    public void canCheckForCarnivoreTerrestialsAndOmnivoreTerrestialsInPaddockFalse() {
+        paddock.addDinosaur(herbivoreTerrestial);
         assertEquals(false, paddock.checkForCarnivoresAndOmnivores());
     }
 
     //Remove Dinosaur Tests
 
     @Test
-    public void canRemoveCarnivoreDinosaur() {
-        paddock.addDinosaur(carnivoreDinosaur);
-        paddock.removeDinosaur(carnivoreDinosaur);
+    public void canRemoveCarnivoreTerrestial() {
+        paddock.addDinosaur(carnivoreTerrestial);
+        paddock.removeDinosaur(carnivoreTerrestial);
         assertEquals(0, paddock.getDinosaursCount());
     }
 }

@@ -1,13 +1,17 @@
+package Dinosaurs;
+
 import Enums.DietType;
 import Interfaces.IEdible;
 
 import java.util.ArrayList;
 
-public class Dinosaur {
+public abstract class Dinosaur {
+    private String genera;
     private DietType diet;
     private ArrayList<IEdible> stomach;
 
-    public Dinosaur(DietType diet) {
+    public Dinosaur(String genera, DietType diet) {
+        this.genera = genera;
         this.diet = diet;
         this.stomach = new ArrayList<>();
     }

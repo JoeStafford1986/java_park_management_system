@@ -1,3 +1,4 @@
+import Dinosaurs.Dinosaur;
 import Enums.DietType;
 
 import java.util.ArrayList;
