@@ -1,5 +1,5 @@
 import Enums.DietType;
-import Interfaces.IEadable;
+import Interfaces.IEdible;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,8 +11,8 @@ public class DinosaurTest {
     private Dinosaur carnivoreDinosaur;
     private Feed plantBasedFeed;
     private Feed nonPlantBasedFeed;
-    private IEadable plantBasedIEadable;
-    private IEadable nonPlantBasedIEadable;
+    private IEdible plantBasedIEdible;
+    private IEdible nonPlantBasedIEdible;
 
     @Before
     public void dinosaur() {
@@ -21,8 +21,8 @@ public class DinosaurTest {
         carnivoreDinosaur = new Dinosaur(DietType.CARNIVORE);
         plantBasedFeed = new Feed(true);
         nonPlantBasedFeed = new Feed(false);
-        plantBasedIEadable = new Feed(true);
-        nonPlantBasedIEadable = new Feed(false);
+        plantBasedIEdible = new Feed(true);
+        nonPlantBasedIEdible = new Feed(false);
     }
 
     @Test
@@ -62,14 +62,14 @@ public class DinosaurTest {
     }
 
     @Test
-    public void canAddPlantBasedIEadableToOmnivoreStomach() {
-        omnivoreDinosaur.eat(plantBasedIEadable);
+    public void canAddPlantBasedIEdibleToOmnivoreStomach() {
+        omnivoreDinosaur.eat(plantBasedIEdible);
         assertEquals(1, omnivoreDinosaur.getStomachCount());
     }
 
     @Test
-    public void canAddNonPlantBasedIEadableToOmnivoreStomach() {
-        omnivoreDinosaur.eat(nonPlantBasedIEadable);
+    public void canAddNonPlantBasedIEdibleToOmnivoreStomach() {
+        omnivoreDinosaur.eat(nonPlantBasedIEdible);
         assertEquals(1, omnivoreDinosaur.getStomachCount());
     }
 
@@ -88,14 +88,14 @@ public class DinosaurTest {
     }
 
     @Test
-    public void canAddPlantBasedIEadableToHerbivoreStomach() {
-        herbivoreDinosaur.eat(plantBasedIEadable);
+    public void canAddPlantBasedIEdibleToHerbivoreStomach() {
+        herbivoreDinosaur.eat(plantBasedIEdible);
         assertEquals(1, herbivoreDinosaur.getStomachCount());
     }
 
     @Test
-    public void cannotAddNonPlantBasedIEadableToHerbivoreStomach() {
-        herbivoreDinosaur.eat(nonPlantBasedIEadable);
+    public void cannotAddNonPlantBasedIEdibleToHerbivoreStomach() {
+        herbivoreDinosaur.eat(nonPlantBasedIEdible);
         assertEquals(0, herbivoreDinosaur.getStomachCount());
     }
 
@@ -114,14 +114,14 @@ public class DinosaurTest {
     }
 
     @Test
-    public void cannotAddPlantBasedIEadableToCarnivoreStomach() {
-        carnivoreDinosaur.eat(plantBasedIEadable);
+    public void cannotAddPlantBasedIEdibleToCarnivoreStomach() {
+        carnivoreDinosaur.eat(plantBasedIEdible);
         assertEquals(0, carnivoreDinosaur.getStomachCount());
     }
 
     @Test
-    public void canAddNonPlantBasedIEadableToCarnivoreStomach() {
-        carnivoreDinosaur.eat(nonPlantBasedIEadable);
+    public void canAddNonPlantBasedIEdibleToCarnivoreStomach() {
+        carnivoreDinosaur.eat(nonPlantBasedIEdible);
         assertEquals(1, carnivoreDinosaur.getStomachCount());
     }
 }

@@ -130,6 +130,8 @@ public class PaddockTest {
         assertEquals(false, paddock.checkForCarnivoresAndOmnivores());
     }
 
+    //Remove Dinosaur Tests
+
     @Test
     public void canRemoveCarnivoreDinosaur() {
         paddock.addDinosaur(carnivoreDinosaur);

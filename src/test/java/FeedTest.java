@@ -1,4 +1,4 @@
-import Interfaces.IEadable;
+import Interfaces.IEdible;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,5 +15,11 @@ public class FeedTest {
     public void canCheckPlantBasedFalse() {
         Feed feed = new Feed(false);
         assertEquals(false, feed.checkPlantBased());
+    }
+
+    @Test
+    public void canCheckPlantBasedOnIEdibleTypeTrue() {
+        IEdible feed = new Feed(true);
+        assertEquals(true, feed.checkPlantBased());
     }
 }
