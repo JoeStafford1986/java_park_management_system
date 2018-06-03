@@ -15,4 +15,10 @@ public class ParkTest {
     public void checkPaddocksStartEmpty() {
         assertEquals(0, park.getPaddocksCount());
     }
+
+    @Test
+    public void canAddPaddock() {
+        Paddock paddock = new Paddock();
+        park.addPaddock(paddock);
+    }
 }

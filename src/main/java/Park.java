@@ -10,4 +10,8 @@ public class Park {
     public int getPaddocksCount() {
         return this.paddocks.size();
     }
+
+    public void addPaddock(Paddock paddock) {
+        this.paddocks.add(paddock);
+    }
 }
