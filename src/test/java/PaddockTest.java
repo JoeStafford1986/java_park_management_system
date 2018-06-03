@@ -141,6 +141,11 @@ public class PaddockTest {
     //Check for Predator Tests
 
     @Test
+    public void canCheckForCarnivoreTerrestialsWhenEmpty() {
+        assertEquals(false, paddock.checkForPredators());
+    }
+
+    @Test
     public void canCheckForCarnivoreTerrestialsInPaddockTrue() {
         paddock.addAnimalAttraction(carnivoreTerrestrial1);
         assertEquals(true, paddock.checkForPredators());

@@ -31,6 +31,11 @@ public class TerrestrialTest {
         assertEquals("Velociraptor", carnivoreTerrestrial.getGenera());
     }
 
+    @Test
+    public void checkStomachStartsEmpty() {
+        assertEquals(0, omnivoreTerrestrial.getStomachCount());
+    }
+
     //DietType Tests
 
     @Test
@@ -46,11 +51,6 @@ public class TerrestrialTest {
     @Test
     public void canGetCarnivoreTerrestrialDiet() {
         assertEquals(DietType.CARNIVORE, carnivoreTerrestrial.getDiet());
-    }
-
-    @Test
-    public void checkStomachStartsEmpty() {
-        assertEquals(0, omnivoreTerrestrial.getStomachCount());
     }
 
     //Omnivore Feeding Tests

@@ -28,10 +28,10 @@ public abstract class AnimalAttraction {
         return this.stomach.size();
     }
 
-    public void eat(IEdible feed) {
-        if ((this.getDiet() == DietType.CARNIVORE && feed.checkPlantBased() == true) || (this.getDiet() == DietType.HERBIVORE && feed.checkPlantBased() == false)) {
+    public void eat(IEdible edible) {
+        if ((this.getDiet() == DietType.CARNIVORE && edible.checkPlantBased() == true) || (this.getDiet() == DietType.HERBIVORE && edible.checkPlantBased() == false)) {
             return;
         }
-        this.stomach.add(feed);
+        this.stomach.add(edible);
     }
 }

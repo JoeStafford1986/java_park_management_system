@@ -1,13 +1,13 @@
 import Interfaces.IEdible;
 
 public class Feed implements IEdible {
-    private boolean plant_based;
+    private boolean plantBased;
 
-    public Feed(boolean plant_based) {
-        this.plant_based = plant_based;
+    public Feed(boolean plantBased) {
+        this.plantBased = plantBased;
     }
 
     public boolean checkPlantBased() {
-        return this.plant_based;
+        return this.plantBased;
     }
 }

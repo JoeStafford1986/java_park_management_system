@@ -30,6 +30,11 @@ public class AvianTest {
         assertEquals("Pteranodon", carnivoreAvian.getGenera());
     }
 
+    @Test
+    public void checkStomachStartsEmpty() {
+        assertEquals(0, omnivoreAvian.getStomachCount());
+    }
+
     //DietType Tests
 
     @Test
@@ -40,11 +45,6 @@ public class AvianTest {
     @Test
     public void canGetCarnivoreAvianDiet() {
         assertEquals(DietType.CARNIVORE, carnivoreAvian.getDiet());
-    }
-
-    @Test
-    public void checkStomachStartsEmpty() {
-        assertEquals(0, omnivoreAvian.getStomachCount());
     }
 
     //Omnivore Feeding Tests
