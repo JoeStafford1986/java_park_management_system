@@ -10,4 +10,8 @@ public class Paddock {
     public int getDinosaursCount() {
         return this.dinosaurs.size();
     }
+
+    public void addDinosaur(Dinosaur dinosaur) {
+        this.dinosaurs.add(dinosaur);
+    }
 }
