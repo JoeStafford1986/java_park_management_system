@@ -14,4 +14,8 @@ public class Paddock {
     public void addDinosaur(Dinosaur dinosaur) {
         this.dinosaurs.add(dinosaur);
     }
+
+    public void removeDinosaur(Dinosaur dinosaur) {
+        this.dinosaurs.remove(dinosaur);
+    }
 }

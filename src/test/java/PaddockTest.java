@@ -25,4 +25,11 @@ public class PaddockTest {
         assertEquals(1, paddock.getDinosaursCount());
     }
 
+    @Test
+    public void canRemoveCarnivoreDinosaur() {
+        paddock.addDinosaur(carnivoreDinosaur);
+        paddock.removeDinosaur(carnivoreDinosaur);
+        assertEquals(0, paddock.getDinosaursCount());
+    }
+
 }
