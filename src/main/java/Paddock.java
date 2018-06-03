@@ -14,16 +14,21 @@ public class Paddock {
     }
 
     public void addDinosaur(Dinosaur dinosaur) {
-        this.dinosaurs.add(dinosaur);
+        if (checkForCarnivoresAndOmnivores() == false && dinosaur.getDiet() == DietType.HERBIVORE) {
+            this.dinosaurs.add(dinosaur);
+        }
+        else if (getDinosaursCount() == 0) {
+            this.dinosaurs.add(dinosaur);
+        }
     }
 
     public void removeDinosaur(Dinosaur dinosaur) {
         this.dinosaurs.remove(dinosaur);
     }
 
-    public boolean checkForCarnivores() {
+    public boolean checkForCarnivoresAndOmnivores() {
         for (Dinosaur dinosaur : dinosaurs) {
-            if (dinosaur.getDiet() == DietType.CARNIVORE) {
+            if (dinosaur.getDiet() == DietType.CARNIVORE || dinosaur.getDiet() ==  DietType.OMNIVORE) {
                 return true;
             }
         }
