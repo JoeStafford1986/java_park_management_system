@@ -1,3 +1,5 @@
+import Enums.DietType;
+
 import java.util.ArrayList;
 
 public class Paddock {
@@ -17,5 +19,14 @@ public class Paddock {
 
     public void removeDinosaur(Dinosaur dinosaur) {
         this.dinosaurs.remove(dinosaur);
+    }
+
+    public boolean checkForCarnivores() {
+        for (Dinosaur dinosaur : dinosaurs) {
+            if (dinosaur.getDiet() == DietType.CARNIVORE) {
+                return true;
+            }
+        }
+        return false;
     }
 }

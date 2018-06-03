@@ -32,4 +32,10 @@ public class PaddockTest {
         assertEquals(0, paddock.getDinosaursCount());
     }
 
+    @Test
+    public void canCheckForCarnivoresInPaddockTrue() {
+        paddock.addDinosaur(carnivoreDinosaur);
+        assertEquals(true, paddock.checkForCarnivores());
+    }
+
 }
