@@ -1,11 +1,8 @@
-package Dinosaurs;
+package Animals;
 
 import Enums.DietType;
-import Interfaces.IEdible;
 
-import java.util.ArrayList;
-
-public class Terrestrial extends Dinosaur {
+public class Terrestrial extends AnimalAttraction {
 
     public Terrestrial(String genera, DietType diet) {
         super(genera, diet);

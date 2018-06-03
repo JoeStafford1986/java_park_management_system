@@ -1,4 +1,4 @@
-import Dinosaurs.Terrestrial;
+import Animals.Terrestrial;
 import Enums.DietType;
 import Interfaces.IEdible;
 import org.junit.Before;

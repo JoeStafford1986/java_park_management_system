@@ -1,37 +1,37 @@
-import Dinosaurs.Dinosaur;
+import Animals.AnimalAttraction;
 import Enums.DietType;
 
 import java.util.ArrayList;
 
 public class Paddock {
-    private ArrayList<Dinosaur> dinosaurs;
+    private ArrayList<AnimalAttraction> animalAttractions;
 
     public Paddock() {
-        this.dinosaurs = new ArrayList<>();
+        this.animalAttractions = new ArrayList<>();
     }
 
-    public int getDinosaursCount() {
-        return this.dinosaurs.size();
+    public int getAnimalAttractionsCount() {
+        return this.animalAttractions.size();
     }
 
     public boolean checkForPredators() {
-        for (Dinosaur dinosaur : dinosaurs) {
-            if (dinosaur.getDiet() == DietType.CARNIVORE || dinosaur.getDiet() ==  DietType.OMNIVORE) {
+        for (AnimalAttraction animalAttraction : animalAttractions) {
+            if (animalAttraction.getDiet() == DietType.CARNIVORE || animalAttraction.getDiet() ==  DietType.OMNIVORE) {
                 return true;
             }
         }
         return false;
     }
 
-    public void addDinosaur(Dinosaur dinosaur) {
-        if (getDinosaursCount() == 0 || (!checkForPredators() && dinosaur.getDiet() == DietType.HERBIVORE)) {
-            this.dinosaurs.add(dinosaur);
-        } else if (dinosaur.getDiet() != DietType.HERBIVORE && dinosaurs.get(0).getGenera() == dinosaur.getGenera()) {
-            this.dinosaurs.add(dinosaur);
+    public void addAnimalAttraction(AnimalAttraction animalAttraction) {
+        if (getAnimalAttractionsCount() == 0 || (!checkForPredators() && animalAttraction.getDiet() == DietType.HERBIVORE)) {
+            this.animalAttractions.add(animalAttraction);
+        } else if (animalAttraction.getDiet() != DietType.HERBIVORE && animalAttractions.get(0).getGenera() == animalAttraction.getGenera()) {
+            this.animalAttractions.add(animalAttraction);
         }
     }
 
-    public void removeDinosaur(Dinosaur dinosaur) {
-        this.dinosaurs.remove(dinosaur);
+    public void removeAnimalAttraction(AnimalAttraction animalAttraction) {
+        this.animalAttractions.remove(animalAttraction);
     }
 }

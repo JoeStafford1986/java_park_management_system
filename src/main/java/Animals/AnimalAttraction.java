@@ -1,21 +1,20 @@
-package Dinosaurs;
+package Animals;
 
 import Enums.DietType;
 import Interfaces.IEdible;
 
 import java.util.ArrayList;
 
-public abstract class Dinosaur {
+public abstract class AnimalAttraction {
     private String genera;
     private DietType diet;
     private ArrayList<IEdible> stomach;
 
-    public Dinosaur(String genera, DietType diet) {
+    public AnimalAttraction(String genera, DietType diet) {
         this.genera = genera;
         this.diet = diet;
         this.stomach = new ArrayList<>();
     }
-
 
     public String getGenera() {
         return this.genera;
