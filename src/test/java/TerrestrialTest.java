@@ -1,4 +1,3 @@
-import Dinosaurs.Dinosaur;
 import Dinosaurs.Terrestrial;
 import Enums.DietType;
 import Interfaces.IEdible;
@@ -28,19 +27,24 @@ public class TerrestrialTest {
     }
 
     @Test
-    public void canGetOmnivoreDiet() {
-        assertEquals(DietType.OMNIVORE, omnivoreTerrestrial.getDiet());
+    public void getGenera() {
+        assertEquals("Velociraptor", carnivoreTerrestrial.getGenera());
     }
 
     //DietType Tests
 
     @Test
-    public void canGetHerbivoreDiet() {
+    public void canGetOmnivoreTerrestrialDiet() {
+        assertEquals(DietType.OMNIVORE, omnivoreTerrestrial.getDiet());
+    }
+
+    @Test
+    public void canGetHerbivoreTerrestrialDiet() {
         assertEquals(DietType.HERBIVORE, herbivoreTerrestrial.getDiet());
     }
 
     @Test
-    public void canGetCarnivoreDiet() {
+    public void canGetCarnivoreTerrestrialDiet() {
         assertEquals(DietType.CARNIVORE, carnivoreTerrestrial.getDiet());
     }
 

@@ -16,6 +16,11 @@ public abstract class Dinosaur {
         this.stomach = new ArrayList<>();
     }
 
+
+    public String getGenera() {
+        return this.genera;
+    }
+
     public DietType getDiet() {
         return this.diet;
     }

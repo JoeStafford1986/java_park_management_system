@@ -5,10 +5,9 @@ import Interfaces.IEdible;
 
 import java.util.ArrayList;
 
-public class Terrestrial extends Dinosaur {
+public class Avian extends Dinosaur {
 
-    public Terrestrial(String genera, DietType diet) {
+    public Avian(String genera, DietType diet) {
         super(genera, diet);
     }
-
 }
