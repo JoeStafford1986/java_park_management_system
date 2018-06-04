@@ -105,6 +105,12 @@ public class TerrestrialTest {
         assertEquals(0, herbivoreTerrestrial.getStomachCount());
     }
 
+    @Test
+    public void cannotAddAnimalAttractionToHerbivoreStomach() {
+        herbivoreTerrestrial.eat(omnivoreTerrestrial);
+        assertEquals(0, herbivoreTerrestrial.getStomachCount());
+    }
+
     //Carnivore Feeding tests
 
     @Test
@@ -128,6 +134,12 @@ public class TerrestrialTest {
     @Test
     public void canAddNonPlantBasedIEdibleToCarnivoreStomach() {
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
+
+    @Test
+    public void canAddAnimalAttractionToCarnivoreStomach() {
+        carnivoreTerrestrial.eat(herbivoreTerrestrial);
         assertEquals(1, carnivoreTerrestrial.getStomachCount());
     }
 }

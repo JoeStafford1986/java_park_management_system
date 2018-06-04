@@ -5,15 +5,17 @@ import Interfaces.IEdible;
 
 import java.util.ArrayList;
 
-public abstract class AnimalAttraction {
+public abstract class AnimalAttraction implements IEdible {
     private String genera;
     private DietType diet;
+    private boolean plantBased;
     private ArrayList<IEdible> stomach;
 
     public AnimalAttraction(String genera, DietType diet) {
         this.genera = genera;
         this.diet = diet;
         this.stomach = new ArrayList<>();
+        this.plantBased = false;
     }
 
     public String getGenera() {
@@ -26,6 +28,10 @@ public abstract class AnimalAttraction {
 
     public int getStomachCount() {
         return this.stomach.size();
+    }
+
+    public boolean checkPlantBased() {
+        return this.plantBased;
     }
 
     public void eat(IEdible edible) {
