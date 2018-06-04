@@ -48,9 +48,15 @@ public class PaddockTest {
     //Adding Carnivore Tests
 
     @Test
-    public void canAddCarnivoreTerrestrial() {
+    public void canAddCarnivoreTerrestrialToNonEnclosedPaddock() {
         paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
         assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void canAddCarnivoreTerrestrialToEnclosedPaddock() {
+        paddockEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(1, paddockEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
@@ -84,10 +90,17 @@ public class PaddockTest {
     //Adding Omnivore Tests
 
     @Test
-    public void canAddOmnivoreTerrestrial() {
+    public void canAddOmnivoreTerrestrialToNonEnclosedPaddock() {
         paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
         assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
+
+    @Test
+    public void canAddOmnivoreTerrestrialToEnclosedPaddock() {
+        paddockEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        assertEquals(1, paddockEnclosed.getAnimalAttractionsCount());
+    }
+
 
     @Test
     public void cannotAddOmnivoreTerrestrialDueToHerbivore() {
@@ -120,9 +133,15 @@ public class PaddockTest {
     //Adding Herbivore Tests
 
     @Test
-    public void canAddHerbivoreTerrestrial() {
+    public void canAddHerbivoreTerrestrialToNonEnclosedPaddock() {
         paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
         assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void canAddHerbivoreTerrestrialToOEnclosedPaddock() {
+        paddockEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        assertEquals(1, paddockEnclosed.getAnimalAttractionsCount());
     }
 
     @Test

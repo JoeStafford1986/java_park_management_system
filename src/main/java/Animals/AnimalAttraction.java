@@ -4,6 +4,7 @@ import Enums.DietType;
 import Interfaces.IEdible;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public abstract class AnimalAttraction {
     private String genera;
