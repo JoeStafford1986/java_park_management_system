@@ -73,6 +73,12 @@ public class AvianTest {
         assertEquals(1, omnivoreAvian.getStomachCount());
     }
 
+    @Test
+    public void canAddAnimalAttractionToOmnivoreStomach() {
+        omnivoreAvian.eat(carnivoreAvian);
+        assertEquals(1, omnivoreAvian.getStomachCount());
+    }
+
     //Carnivore Feeding tests
 
     @Test
@@ -96,6 +102,12 @@ public class AvianTest {
     @Test
     public void canAddNonPlantBasedIEdibleToCarnivoreStomach() {
         carnivoreAvian.eat(nonPlantBasedIEdible);
+        assertEquals(1, carnivoreAvian.getStomachCount());
+    }
+
+    @Test
+    public void canAddAnimalAttractionToCarnivoreStomach() {
+        carnivoreAvian.eat(omnivoreAvian);
         assertEquals(1, carnivoreAvian.getStomachCount());
     }
 }
