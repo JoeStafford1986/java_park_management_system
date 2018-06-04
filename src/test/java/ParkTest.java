@@ -12,6 +12,7 @@ public class ParkTest {
     private Paddock destinationEnclosedPaddock;
     private Terrestrial herbivoreTerrestrial1;
     private Terrestrial herbivoreTerrestrial2;
+    private Terrestrial carnivoreTerrestrial1;
 
     @Before
     public void before() {
@@ -20,6 +21,8 @@ public class ParkTest {
         destinationEnclosedPaddock = new Paddock(true);
         herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
         herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE);
+        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
+
     }
 
     @Test
@@ -51,5 +54,14 @@ public class ParkTest {
         park.transferAnimalAttractionBetweenPaddocks(herbivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
         assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
         assertEquals(2, destinationEnclosedPaddock.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void cannotTransferHerbivoreTerrestrialAnimalAttractionBetweenPaddocksWhenDestinationContainsPredator() {
+        originEnclosedPaddock.addAnimalAttraction(herbivoreTerrestrial1);
+        destinationEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial1);
+        park.transferAnimalAttractionBetweenPaddocks(herbivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
+        assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
+        assertEquals(1, destinationEnclosedPaddock.getAnimalAttractionsCount());
     }
 }

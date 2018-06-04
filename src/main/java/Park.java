@@ -18,7 +18,11 @@ public class Park {
     }
 
     public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {
-        originPaddock.removeAnimalAttraction(animalToTransfer);
+        int currentDinosaurCount = destinationPaddock.getAnimalAttractionsCount();
         destinationPaddock.addAnimalAttraction(animalToTransfer);
+        if (destinationPaddock.getAnimalAttractionsCount() == currentDinosaurCount + 1)
+        {
+            originPaddock.removeAnimalAttraction(animalToTransfer);
+        }
     }
 }
