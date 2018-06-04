@@ -18,7 +18,7 @@ public class ParkTest {
 
     @Test
     public void canAddPaddock() {
-        Paddock paddock = new Paddock();
+        Paddock paddock = new Paddock(true);
         park.addPaddock(paddock);
     }
 }

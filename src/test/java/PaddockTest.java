@@ -1,3 +1,4 @@
+import Animals.Avian;
 import Animals.Terrestrial;
 import Enums.DietType;
 import org.junit.Before;
@@ -6,177 +7,197 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PaddockTest {
-    private Paddock paddock;
+    private Paddock paddockNotEnclosed;
+    private Paddock paddockEnclosed;
     private Terrestrial omnivoreTerrestrial1;
     private Terrestrial omnivoreTerrestrial2;
     private Terrestrial herbivoreTerrestrial1;
     private Terrestrial herbivoreTerrestrial2;
     private Terrestrial carnivoreTerrestrial1;
     private Terrestrial carnivoreTerrestrial2;
+    private Avian carnivoreAvian;
 
     @Before
     public void before() {
-        paddock = new Paddock();
+        paddockNotEnclosed = new Paddock(false);
+        paddockEnclosed = new Paddock(true);
         omnivoreTerrestrial1 = new Terrestrial("Gallimimus", DietType.OMNIVORE);
         omnivoreTerrestrial2 = new Terrestrial("Oviraptor", DietType.OMNIVORE);
         herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
         herbivoreTerrestrial2 = new Terrestrial("Triceratops", DietType.HERBIVORE);
         carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
         carnivoreTerrestrial2 = new Terrestrial(" Giganotosaurus", DietType.CARNIVORE);
+        carnivoreAvian = new Avian("Sinosauropteryx", DietType.CARNIVORE);
     }
 
     @Test
     public void checkPaddockStartsEmpty() {
-        assertEquals(0, paddock.getAnimalAttractionsCount());
+        assertEquals(0, paddockNotEnclosed.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void canCheckEnclosedTrue() {
+        assertEquals(true, paddockEnclosed.checkEnclosed());
+    }
+
+    @Test
+    public void canCheckEnclosedFalse() {
+        assertEquals(false, paddockNotEnclosed.checkEnclosed());
     }
 
     //Adding Carnivore Tests
 
     @Test
     public void canAddCarnivoreTerrestrial() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void cannotAddCarnivoreTerrestialDueToHerbivore() {
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void cannotAddCarnivoreTerrestrialDueToHerbivore() {
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void cannotAddCarnivoreTerrestialDueToOmnivore() {
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void cannotAddCarnivoreTerrestrialDueToOmnivore() {
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void cannotAddCarnivoreTerrestialDueToCarnivore() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        paddock.addAnimalAttraction(carnivoreTerrestrial2);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void cannotAddCarnivoreTerrestrialDueToCarnivore() {
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial2);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void canAddCarnivoreTerrestialDueToOtherCarnivoreBeingSameGenera() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        assertEquals(2, paddock.getAnimalAttractionsCount());
+    public void canAddCarnivoreTerrestrialDueToOtherCarnivoreBeingSameGenera() {
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(2, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     //Adding Omnivore Tests
 
     @Test
     public void canAddOmnivoreTerrestrial() {
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
     public void cannotAddOmnivoreTerrestrialDueToHerbivore() {
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void cannotAddOmnivoreTerrestialDueToCarnivore() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void cannotAddOmnivoreTerrestrialDueToCarnivore() {
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
     public void cannotAddOmnivoreTerrestrialDueToOmnivore() {
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        paddock.addAnimalAttraction(omnivoreTerrestrial2);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial2);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
     public void canAddOmnivoreTerrestrialDueToOtherOmnivoreBeingSameGenera() {
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        assertEquals(2, paddock.getAnimalAttractionsCount());
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        assertEquals(2, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     //Adding Herbivore Tests
 
     @Test
-    public void canAddHerbivoreTerrestial() {
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void canAddHerbivoreTerrestrial() {
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void canAddMultipleHerbivoreTerrestialsOfSameGenera() {
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        assertEquals(2, paddock.getAnimalAttractionsCount());
+    public void canAddMultipleHerbivoreTerrestrialsOfSameGenera() {
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        assertEquals(2, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void canAddMultipleHerbivoreTerrestialsOfDifferentGenera() {
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        paddock.addAnimalAttraction(herbivoreTerrestrial2);
-        assertEquals(2, paddock.getAnimalAttractionsCount());
+    public void canAddMultipleHerbivoreTerrestrialsOfDifferentGenera() {
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial2);
+        assertEquals(2, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void cannotAddHerbivoreTerrestialDueToOmnivoreTerrestial() {
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void cannotAddHerbivoreTerrestrialDueToOmnivoreTerrestrial() {
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     @Test
-    public void cannotAddHerbivoreTerrestialDueToCarnivoreTerrestial() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        assertEquals(1, paddock.getAnimalAttractionsCount());
+    public void cannotAddHerbivoreTerrestrialDueToCarnivoreTerrestrial() {
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        assertEquals(1, paddockNotEnclosed.getAnimalAttractionsCount());
+    }
+
+    // Adding Avian Animal Attractions Tests
+
+    @Test
+    public void canAddAvianToEnclosedPaddock() {
+        paddockEnclosed.addAnimalAttraction(carnivoreAvian);
+        assertEquals(1, paddockEnclosed.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void cannotAddAvianToNonEnclosedPaddock() {
+        paddockEnclosed.addAnimalAttraction(carnivoreAvian);
+        assertEquals(0, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 
     //Check for Predator Tests
 
     @Test
-    public void canCheckForCarnivoreTerrestialsWhenEmpty() {
-        assertEquals(false, paddock.checkForPredators());
+    public void canCheckForCarnivoreTerrestrialsWhenEmpty() {
+        assertEquals(false, paddockNotEnclosed.checkForPredators());
     }
 
     @Test
-    public void canCheckForCarnivoreTerrestialsInPaddockTrue() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        assertEquals(true, paddock.checkForPredators());
+    public void canCheckForCarnivoreTerrestrialsInPaddockTrue() {
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(true, paddockNotEnclosed.checkForPredators());
     }
 
     @Test
-    public void canCheckForOmnivoreTerrestialsInPaddockTrue() {
-        paddock.addAnimalAttraction(omnivoreTerrestrial1);
-        assertEquals(true, paddock.checkForPredators());
+    public void canCheckForOmnivoreTerrestrialsInPaddockTrue() {
+        paddockNotEnclosed.addAnimalAttraction(omnivoreTerrestrial1);
+        assertEquals(true, paddockNotEnclosed.checkForPredators());
     }
 
     @Test
-    public void canCheckForCarnivoreTerrestialsAndOmnivoreTerrestialsInPaddockFalse() {
-        paddock.addAnimalAttraction(herbivoreTerrestrial1);
-        assertEquals(false, paddock.checkForPredators());
+    public void canCheckForCarnivoreTerrestrialsAndOmnivoreTerrestrialsInPaddockFalse() {
+        paddockNotEnclosed.addAnimalAttraction(herbivoreTerrestrial1);
+        assertEquals(false, paddockNotEnclosed.checkForPredators());
     }
-//
-//    //Check Which Predator Tests
-//
-//    @Test
-//    public void canGetGeneraOfPredatorGeneraInPaddockPredatorExists() {
-//        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-//        assertEquals("Velociraptor", paddock.getGeneraOfPredator());
-//    }
 
     //Remove AnimalAttraction Tests
 
     @Test
     public void canRemoveCarnivoreTerrestrial() {
-        paddock.addAnimalAttraction(carnivoreTerrestrial1);
-        paddock.removeAnimalAttraction(carnivoreTerrestrial1);
-        assertEquals(0, paddock.getAnimalAttractionsCount());
+        paddockNotEnclosed.addAnimalAttraction(carnivoreTerrestrial1);
+        paddockNotEnclosed.removeAnimalAttraction(carnivoreTerrestrial1);
+        assertEquals(0, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 }
