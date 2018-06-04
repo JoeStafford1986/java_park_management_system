@@ -184,4 +184,10 @@ public class TerrestrialTest {
         carnivoreTerrestrial.eat(visitor);
         assertEquals(1, carnivoreTerrestrial.getStomachCount());
     }
+
+    @Test
+    public void canAddStaffToCarnivoreStomach() {
+        carnivoreTerrestrial.eat(staff);
+        assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
 }
