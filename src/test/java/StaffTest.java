@@ -17,4 +17,9 @@ public class StaffTest {
         assertEquals("Dennis Nedry", staff.getName());
     }
 
+    @Test
+    public void canCheckPlantBased() {
+        assertEquals(false, staff.checkPlantBased());
+    }
+
 }
