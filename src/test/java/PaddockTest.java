@@ -182,7 +182,7 @@ public class PaddockTest {
 
     @Test
     public void cannotAddAvianToNonEnclosedPaddock() {
-        paddockEnclosed.addAnimalAttraction(carnivoreAvian);
+        paddockNotEnclosed.addAnimalAttraction(carnivoreAvian);
         assertEquals(0, paddockNotEnclosed.getAnimalAttractionsCount());
     }
 

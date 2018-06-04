@@ -31,7 +31,7 @@ public class Paddock {
     }
 
     public void addAnimalAttraction(AnimalAttraction animalAttraction) {
-        if (animalAttractions.getClass().isAssignableFrom(Avian.class) && !this.checkEnclosed()) {
+        if (animalAttraction.getClass().isAssignableFrom(Avian.class) && this.checkEnclosed() == false) {
             return;
         }
         if (getAnimalAttractionsCount() == 0 || (!checkForPredators() && animalAttraction.getDiet() == DietType.HERBIVORE)) {
