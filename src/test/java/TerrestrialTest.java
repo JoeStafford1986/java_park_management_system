@@ -79,6 +79,12 @@ public class TerrestrialTest {
         assertEquals(1, omnivoreTerrestrial.getStomachCount());
     }
 
+    @Test
+    public void canAddAnimalAttractionToOmnivoreStomach() {
+        omnivoreTerrestrial.eat(carnivoreTerrestrial);
+        assertEquals(1, omnivoreTerrestrial.getStomachCount());
+    }
+
     //Herbivore Feeding tests
 
     @Test
