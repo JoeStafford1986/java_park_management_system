@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25fe7f7-6cca-49d1-8626-b3c0a0e9314a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/VisitorTest.java" afterPath="$PROJECT_DIR$/src/test/java/VisitorTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" afterPath="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -115,7 +115,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VisitorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/VisitorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -133,23 +133,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TerrestrialTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TerrestrialTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TerrestrialTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="416">
+              <caret line="168" column="40" lean-forward="false" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1081#1082#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1429#1430#0" expanded="true" />
-                <element signature="e#1509#1510#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1099#1100#0" expanded="true" />
+                <element signature="e#1177#1178#0" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1385#1386#0" expanded="true" />
+                <element signature="e#1463#1464#0" expanded="true" />
+                <element signature="e#1525#1526#0" expanded="true" />
+                <element signature="e#1605#1606#0" expanded="true" />
+                <element signature="e#1667#1668#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -521,11 +521,11 @@
         <option value="$PROJECT_DIR$/src/test/java/ParkTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Animals/AnimalAttraction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Animals/Terrestrial.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/AvianTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/People/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/People/Visitor.java" />
         <option value="$PROJECT_DIR$/src/test/java/VisitorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" />
       </list>
     </option>
   </component>
@@ -635,7 +635,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VisitorTest">
+  <component name="RunManager" selected="JUnit.TerrestrialTest.canAddVisitorToCarnivoreStomach">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -697,14 +697,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="AvianTest.canAddAnimalAttractionToOmnivoreStomach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TerrestrialTest.canAddVisitorToCarnivoreStomach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="park_management_system_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AvianTest" />
-      <option name="METHOD_NAME" value="canAddAnimalAttractionToOmnivoreStomach" />
+      <option name="MAIN_CLASS_NAME" value="TerrestrialTest" />
+      <option name="METHOD_NAME" value="canAddVisitorToCarnivoreStomach" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -717,14 +717,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TerrestrialTest.canAddAnimalAttractionToOmnivoreStomach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TerrestrialTest.cannotAddVisitorToHerbivoreStomach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="park_management_system_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TerrestrialTest" />
-      <option name="METHOD_NAME" value="canAddAnimalAttractionToOmnivoreStomach" />
+      <option name="METHOD_NAME" value="cannotAddVisitorToHerbivoreStomach" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -818,19 +818,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TerrestrialTest.canAddAnimalAttractionToOmnivoreStomach" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AvianTest.canAddAnimalAttractionToOmnivoreStomach" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AvianTest.canAddAnimalAttractionToCarnivoreStomach" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.VisitorTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AvianTest.canAddAnimalAttractionToCarnivoreStomach" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.VisitorTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TerrestrialTest.cannotAddVisitorToHerbivoreStomach" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TerrestrialTest.canAddVisitorToCarnivoreStomach" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.VisitorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AvianTest.canAddAnimalAttractionToCarnivoreStomach" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AvianTest.canAddAnimalAttractionToOmnivoreStomach" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TerrestrialTest.canAddAnimalAttractionToOmnivoreStomach" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TerrestrialTest.canAddVisitorToCarnivoreStomach" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TerrestrialTest.cannotAddVisitorToHerbivoreStomach" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.VisitorTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AvianTest.canAddAnimalAttractionToCarnivoreStomach" />
       </list>
     </recent_temporary>
   </component>
@@ -866,14 +866,14 @@
     <history-entry file="AvianTest_canAddAnimalAttractionToOmnivoreStomach - 2018.06.04 at 15h 34m 38s.xml">
       <configuration name="AvianTest.canAddAnimalAttractionToOmnivoreStomach" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TerrestrialTest_canAddAnimalAttractionToCarnivoreStomach - 2018.06.04 at 15h 22m 59s.xml">
-      <configuration name="TerrestrialTest.canAddAnimalAttractionToCarnivoreStomach" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TerrestrialTest_canAddAnimalAttractionToOmnivoreStomach - 2018.06.04 at 15h 30m 04s.xml">
       <configuration name="TerrestrialTest.canAddAnimalAttractionToOmnivoreStomach" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TerrestrialTest_cannotAddAnimalAttractionToHerbivoreStomach - 2018.06.04 at 15h 21m 49s.xml">
-      <configuration name="TerrestrialTest.cannotAddAnimalAttractionToHerbivoreStomach" configurationId="JUnit" />
+    <history-entry file="TerrestrialTest_canAddVisitorToCarnivoreStomach - 2018.06.04 at 20h 18m 20s.xml">
+      <configuration name="TerrestrialTest.canAddVisitorToCarnivoreStomach" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TerrestrialTest_cannotAddVisitorToHerbivoreStomach - 2018.06.04 at 20h 17m 53s.xml">
+      <configuration name="TerrestrialTest.cannotAddVisitorToHerbivoreStomach" configurationId="JUnit" />
     </history-entry>
     <history-entry file="VisitorTest - 2018.06.04 at 19h 08m 09s.xml">
       <configuration name="VisitorTest" configurationId="JUnit" />
@@ -1176,26 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TerrestrialTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Animals/Terrestrial.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1262,6 +1242,26 @@
             <element signature="e#364#365#0" expanded="true" />
             <element signature="e#414#415#0" expanded="true" />
             <element signature="e#476#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TerrestrialTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="168" column="40" lean-forward="false" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1667#1668#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
           </folding>
         </state>
       </provider>

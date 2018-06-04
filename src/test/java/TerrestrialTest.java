@@ -1,6 +1,7 @@
 import Animals.Terrestrial;
 import Enums.DietType;
 import Interfaces.IEdible;
+import People.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ public class TerrestrialTest {
     private Feed nonPlantBasedFeed;
     private IEdible plantBasedIEdible;
     private IEdible nonPlantBasedIEdible;
+    private Visitor visitor;
 
     @Before
     public void dinosaur() {
@@ -24,6 +26,7 @@ public class TerrestrialTest {
         nonPlantBasedFeed = new Feed(false);
         plantBasedIEdible = new Feed(true);
         nonPlantBasedIEdible = new Feed(false);
+        visitor = new Visitor("Euan Bell");
     }
 
     @Test
@@ -85,6 +88,12 @@ public class TerrestrialTest {
         assertEquals(1, omnivoreTerrestrial.getStomachCount());
     }
 
+    @Test
+    public void canAddVisitorToOmnivoreStomach() {
+        omnivoreTerrestrial.eat(visitor);
+        assertEquals(1, omnivoreTerrestrial.getStomachCount());
+    }
+
     //Herbivore Feeding tests
 
     @Test
@@ -117,6 +126,12 @@ public class TerrestrialTest {
         assertEquals(0, herbivoreTerrestrial.getStomachCount());
     }
 
+    @Test
+    public void cannotAddVisitorToHerbivoreStomach() {
+        herbivoreTerrestrial.eat(visitor);
+        assertEquals(0, herbivoreTerrestrial.getStomachCount());
+    }
+
     //Carnivore Feeding tests
 
     @Test
@@ -146,6 +161,12 @@ public class TerrestrialTest {
     @Test
     public void canAddAnimalAttractionToCarnivoreStomach() {
         carnivoreTerrestrial.eat(herbivoreTerrestrial);
+        assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
+
+    @Test
+    public void canAddVisitorToCarnivoreStomach() {
+        carnivoreTerrestrial.eat(visitor);
         assertEquals(1, carnivoreTerrestrial.getStomachCount());
     }
 }
