@@ -31,13 +31,17 @@ public class Paddock {
     }
 
     public void addAnimalAttraction(AnimalAttraction animalAttraction) {
-        if (animalAttractions.getClass().isAssignableFrom(Avian.class) && !this.enclosed) {
+        if (animalAttractions.getClass().isAssignableFrom(Avian.class) && !this.checkEnclosed()) {
             return;
         }
         if (getAnimalAttractionsCount() == 0 || (!checkForPredators() && animalAttraction.getDiet() == DietType.HERBIVORE)) {
             this.animalAttractions.add(animalAttraction);
-        } else if (animalAttraction.getDiet() != DietType.HERBIVORE && animalAttractions.get(0).getGenera() == animalAttraction.getGenera()) {
-            this.animalAttractions.add(animalAttraction);
+        } else if (animalAttraction.getDiet() != DietType.HERBIVORE) {
+            String animalToAddGenera = animalAttraction.getGenera();
+            String animalInPaddockGenera = animalAttractions.get(0).getGenera();
+            if (animalToAddGenera.equals(animalInPaddockGenera)) {
+                this.animalAttractions.add(animalAttraction);
+            }
         }
     }
 

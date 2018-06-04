@@ -13,6 +13,8 @@ public class ParkTest {
     private Terrestrial herbivoreTerrestrial1;
     private Terrestrial herbivoreTerrestrial2;
     private Terrestrial carnivoreTerrestrial1;
+    private Terrestrial carnivoreTerrestrial2;
+    private Terrestrial carnivoreTerrestrial3;
 
     @Before
     public void before() {
@@ -22,7 +24,8 @@ public class ParkTest {
         herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
         herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE);
         carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-
+        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE);
+        carnivoreTerrestrial3 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
     }
 
     @Test
@@ -63,5 +66,23 @@ public class ParkTest {
         park.transferAnimalAttractionBetweenPaddocks(herbivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
         assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
         assertEquals(1, destinationEnclosedPaddock.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void cannotTransferCarnivoreTerrestrialAnimalAttractionBetweenPaddocksWhenDestinationContainsDifferentPredator() {
+        originEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial1);
+        destinationEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial2);
+        park.transferAnimalAttractionBetweenPaddocks(carnivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
+        assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
+        assertEquals(1, destinationEnclosedPaddock.getAnimalAttractionsCount());
+    }
+
+    @Test
+    public void canTransferCarnivoreTerrestrialAnimalAttractionBetweenPaddocksWhenDestinationContainsSameTypeOfPredator() {
+        originEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial1);
+        destinationEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial3);
+        park.transferAnimalAttractionBetweenPaddocks(carnivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
+        assertEquals(0, originEnclosedPaddock.getAnimalAttractionsCount());
+        assertEquals(2, destinationEnclosedPaddock.getAnimalAttractionsCount());
     }
 }

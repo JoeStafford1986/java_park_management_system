@@ -26,7 +26,7 @@ public class PaddockTest {
         herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
         herbivoreTerrestrial2 = new Terrestrial("Triceratops", DietType.HERBIVORE);
         carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-        carnivoreTerrestrial2 = new Terrestrial(" Giganotosaurus", DietType.CARNIVORE);
+        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE);
         carnivoreAvian = new Avian("Sinosauropteryx", DietType.CARNIVORE);
     }
 
