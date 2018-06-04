@@ -16,4 +16,9 @@ public class VisitorTest {
     public void canGetName() {
         assertEquals("Euan Bell", visitor.getName());
     }
+
+    @Test
+    public void canCheckPlantBased() {
+        assertEquals(false, visitor.checkPlantBased());
+    }
 }
