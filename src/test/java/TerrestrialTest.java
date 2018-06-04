@@ -141,6 +141,12 @@ public class TerrestrialTest {
         assertEquals(0, herbivoreTerrestrial.getStomachCount());
     }
 
+    @Test
+    public void cannotAddStaffToHerbivoreStomach() {
+        herbivoreTerrestrial.eat(staff);
+        assertEquals(0, herbivoreTerrestrial.getStomachCount());
+    }
+
     //Carnivore Feeding tests
 
     @Test
