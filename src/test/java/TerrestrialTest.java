@@ -1,6 +1,7 @@
 import Animals.Terrestrial;
 import Enums.DietType;
 import Interfaces.IEdible;
+import People.Staff;
 import People.Visitor;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +17,7 @@ public class TerrestrialTest {
     private IEdible plantBasedIEdible;
     private IEdible nonPlantBasedIEdible;
     private Visitor visitor;
+    private Staff staff;
 
     @Before
     public void dinosaur() {
@@ -27,6 +29,7 @@ public class TerrestrialTest {
         plantBasedIEdible = new Feed(true);
         nonPlantBasedIEdible = new Feed(false);
         visitor = new Visitor("Euan Bell");
+        staff = new Staff("Dennis Nedry");
     }
 
     @Test
@@ -91,6 +94,12 @@ public class TerrestrialTest {
     @Test
     public void canAddVisitorToOmnivoreStomach() {
         omnivoreTerrestrial.eat(visitor);
+        assertEquals(1, omnivoreTerrestrial.getStomachCount());
+    }
+
+    @Test
+    public void canAddStaffToOmnivoreStomach() {
+        omnivoreTerrestrial.eat(staff);
         assertEquals(1, omnivoreTerrestrial.getStomachCount());
     }
 
