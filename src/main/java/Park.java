@@ -1,3 +1,5 @@
+import Animals.AnimalAttraction;
+
 import java.util.ArrayList;
 
 public class Park {
@@ -13,5 +15,10 @@ public class Park {
 
     public void addPaddock(Paddock paddock) {
         this.paddocks.add(paddock);
+    }
+
+    public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {
+        originPaddock.removeAnimalAttraction(animalToTransfer);
+        destinationPaddock.addAnimalAttraction(animalToTransfer);
     }
 }
