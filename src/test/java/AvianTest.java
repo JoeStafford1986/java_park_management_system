@@ -134,4 +134,10 @@ public class AvianTest {
         carnivoreAvian.eat(visitor);
         assertEquals(1, carnivoreAvian.getStomachCount());
     }
+
+    @Test
+    public void canAddStaffToCarnivoreStomach() {
+        carnivoreAvian.eat(staff);g
+        assertEquals(1, carnivoreAvian.getStomachCount());
+    }
 }
