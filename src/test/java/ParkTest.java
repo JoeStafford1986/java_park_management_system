@@ -2,6 +2,7 @@ import Animals.AnimalAttraction;
 import Animals.Avian;
 import Animals.Terrestrial;
 import Enums.DietType;
+import People.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class ParkTest {
     private Park park;
     private Area area;
+    private Visitor visitor;
 //    private Paddock originEnclosedPaddock;
 //    private Paddock destinationEnclosedPaddock;
 //    private Paddock destinationNonEnclosedPaddock;
@@ -24,6 +26,7 @@ public class ParkTest {
     public void before() {
         park = new Park();
         area = new Area();
+        visitor = new Visitor("Jo Malo");
 //        originEnclosedPaddock = new Paddock(true);
 //        destinationEnclosedPaddock = new Paddock(true);
 //        destinationNonEnclosedPaddock = new Paddock(false);
@@ -54,6 +57,12 @@ public class ParkTest {
     public void canAddAreasToPark() {
         park.addArea(area);
         assertEquals(1, park.getAreasCount());
+    }
+
+    @Test
+    public void canAddVisitorsToPark() {
+        park.addVisitor(visitor);
+        assertEquals(1, park.getVisitorsCount());
     }
 //
 //    //Transfer Tests

@@ -31,6 +31,10 @@ public class Park {
         this.areas.add(area);
     }
 
+    public void addVisitor(Visitor visitor) {
+        this.visitors.add(visitor);
+    }
+
 
 
     public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {
