@@ -1,3 +1,4 @@
+import People.Staff;
 import People.Visitor;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +9,14 @@ public class AreaTest {
     private Area area;
     private Paddock enclosedPaddock;
     private Visitor visitor;
+    private Staff staff;
 
     @Before
     public void before() {
         area = new Area();
         enclosedPaddock = new Paddock(true);
         visitor = new Visitor("Duncan Marjoribanks");
+        staff = new Staff("John Hammond");
     }
 
     @Test
@@ -41,5 +44,11 @@ public class AreaTest {
     public void canAddVisitor() {
         area.addVisitor(visitor);
         assertEquals(1, area.getVisitorsCount());
+    }
+
+    @Test
+    public void canAddStaffMember() {
+        area.addStaff(staff);
+        assertEquals(1, area.getStaffMembersCount());
     }
 }

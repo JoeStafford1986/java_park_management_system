@@ -1,3 +1,4 @@
+import People.Staff;
 import People.Visitor;
 
 import java.util.ArrayList;
@@ -5,7 +6,7 @@ import java.util.ArrayList;
 public class Area {
     private ArrayList<Paddock> paddocks;
     private ArrayList<Visitor> visitors;
-    private ArrayList<Visitor> staffMembers;
+    private ArrayList<Staff> staffMembers;
 
     public Area() {
         this.paddocks = new ArrayList<>();
@@ -31,5 +32,9 @@ public class Area {
 
     public void addVisitor(Visitor visitor) {
         this.visitors.add(visitor);
+    }
+
+    public void addStaff(Staff staff) {
+        this.staffMembers.add(staff);
     }
 }
