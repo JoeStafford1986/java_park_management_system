@@ -15,15 +15,8 @@ public class ParkTest {
     private Visitor visitor;
     private Staff staff;
     private Terrestrial animalAttraction;
-//    private Paddock originEnclosedPaddock;
-//    private Paddock destinationEnclosedPaddock;
-//    private Paddock destinationNonEnclosedPaddock;
-//    private Terrestrial herbivoreTerrestrial1;
-//    private Terrestrial herbivoreTerrestrial2;
-//    private Terrestrial carnivoreTerrestrial1;
-//    private Terrestrial carnivoreTerrestrial2;
-//    private Terrestrial carnivoreTerrestrial3;
-//    private Avian carnivoreAvian1;
+    private Area originArea;
+    private Area destinationArea;
 
     @Before
     public void before() {
@@ -32,15 +25,8 @@ public class ParkTest {
         visitor = new Visitor("Jo Malo");
         staff = new Staff("Robert Muldoon");
         animalAttraction = new Terrestrial("Velocirapter", DietType.CARNIVORE);
-//        originEnclosedPaddock = new Paddock(true);
-//        destinationEnclosedPaddock = new Paddock(true);
-//        destinationNonEnclosedPaddock = new Paddock(false);
-//        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
-//        herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE);
-//        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-//        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE);
-//        carnivoreTerrestrial3 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-//        carnivoreAvian1 = new Avian("Sinosauropteryx", DietType.CARNIVORE);
+        originArea = new Area();
+        destinationArea = new Area();
     }
 
     @Test
@@ -62,6 +48,8 @@ public class ParkTest {
     public void checkAnimalAttractionsStartsEmpty() {
         assertEquals(0, park.getAnimalAttractionsCount());
     }
+
+    //Adding Entity Tests
 
     @Test
     public void canAddAreasToPark() {
@@ -87,6 +75,8 @@ public class ParkTest {
         assertEquals(1, park.getAnimalAttractionsCount());
     }
 
+    //Removal Tests
+
     @Test
     public void canRemoveVisitorFromPark() {
         park.addVisitor(visitor);
@@ -101,65 +91,28 @@ public class ParkTest {
         assertEquals(0, park.getStaffMembersCount());
     }
 
+    @Test
+    public void canRemoveAnimalAttractionFromPark() {
+        park.addAnimalAttraction(animalAttraction);
+        park.removeAnimalAttraction(animalAttraction);
+        assertEquals(0, park.getAnimalAttractionsCount());
+    }
 
-//
-//    //Transfer Tests
-//
-//    @Test
-//    public void canTransferHerbivoreTerrestrialAnimalAttractionBetweenPaddocksEmptyPaddocks() {
-//        originEnclosedPaddock.addAnimalAttraction(herbivoreTerrestrial1);
-//        park.transferAnimalAttractionBetweenPaddocks(herbivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
-//        assertEquals(0, originEnclosedPaddock.getAnimalAttractionsCount());
-//        assertEquals(1, destinationEnclosedPaddock.getAnimalAttractionsCount());
-//    }
-//
-//    @Test
-//    public void canTransferHerbivoreTerrestrialAnimalAttractionBetweenPaddocksNotEmptyPaddocks() {
-//        originEnclosedPaddock.addAnimalAttraction(herbivoreTerrestrial1);
-//        originEnclosedPaddock.addAnimalAttraction(herbivoreTerrestrial2);
-//        destinationEnclosedPaddock.addAnimalAttraction(herbivoreTerrestrial1);
-//        park.transferAnimalAttractionBetweenPaddocks(herbivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
-//        assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
-//        assertEquals(2, destinationEnclosedPaddock.getAnimalAttractionsCount());
-//    }
-//
-//    @Test
-//    public void cannotTransferHerbivoreTerrestrialAnimalAttractionBetweenPaddocksWhenDestinationContainsPredator() {
-//        originEnclosedPaddock.addAnimalAttraction(herbivoreTerrestrial1);
-//        destinationEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial1);
-//        park.transferAnimalAttractionBetweenPaddocks(herbivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
-//        assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
-//        assertEquals(1, destinationEnclosedPaddock.getAnimalAttractionsCount());
-//    }
-//
-//    @Test
-//    public void cannotTransferCarnivoreTerrestrialAnimalAttractionBetweenPaddocksWhenDestinationContainsDifferentPredator() {
-//        originEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial1);
-//        destinationEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial2);
-//        park.transferAnimalAttractionBetweenPaddocks(carnivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
-//        assertEquals(1, originEnclosedPaddock.getAnimalAttractionsCount());
-//        assertEquals(1, destinationEnclosedPaddock.getAnimalAttractionsCount());
-//    }
-//
-//    @Test
-//    public void canTransferCarnivoreTerrestrialAnimalAttractionBetweenPaddocksWhenDestinationContainsSameTypeOfPredator() {
-//        originEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial1);
-//        destinationEnclosedPaddock.addAnimalAttraction(carnivoreTerrestrial3);
-//        park.transferAnimalAttractionBetweenPaddocks(carnivoreTerrestrial1, originEnclosedPaddock, destinationEnclosedPaddock);
-//        assertEquals(0, originEnclosedPaddock.getAnimalAttractionsCount());
-//        assertEquals(2, destinationEnclosedPaddock.getAnimalAttractionsCount());
-//    }
-//
-//    @Test
-//    public void canTransferAvianCarnivoreFromEnclosedPaddockToEnclosedPaddock() {
-//        originEnclosedPaddock.addAnimalAttraction(carnivoreAvian1);
-//        park.transferAnimalAttractionBetweenPaddocks(carnivoreAvian1, originEnclosedPaddock, destinationEnclosedPaddock);
-//    }
-//
-//    @Test
-//    public void cannotTransferAvianCarnivoreFromEnclosedPaddockToNonEnclosedPaddock() {
-//        originEnclosedPaddock.addAnimalAttraction(carnivoreAvian1);
-//        park.transferAnimalAttractionBetweenPaddocks(carnivoreAvian1, originEnclosedPaddock, destinationNonEnclosedPaddock);
-//        assertEquals(0, destinationEnclosedPaddock.getAnimalAttractionsCount());
-//    }
+    //Transfer Tests
+
+    @Test
+    public void canTransferVisitorBetweenAreas() {
+        originArea.addVisitor(visitor);
+        park.transferVisitorBetweenAreas(visitor, originArea, destinationArea);
+        assertEquals(0, originArea.getVisitorsCount());
+        assertEquals(1, destinationArea.getVisitorsCount());
+    }
+
+    @Test
+    public void canTransferStaffBetweenAreas() {
+        originArea.addStaff(staff);
+        park.transferStaffBetweenAreas(staff, originArea, destinationArea);
+        assertEquals(0, originArea.getStaffMembersCount());
+        assertEquals(1, destinationArea.getStaffMembersCount());
+    }
 }

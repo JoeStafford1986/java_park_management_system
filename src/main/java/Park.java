@@ -57,6 +57,20 @@ public class Park {
         this.staffMembers.remove(staff);
     }
 
+    public void removeAnimalAttraction(AnimalAttraction animalAttraction) {
+        this.animalAttractions.remove(animalAttraction);
+    }
+
+    public void transferVisitorBetweenAreas(Visitor visitor, Area originArea, Area destinationArea) {
+        originArea.removeVisitor(visitor);
+        destinationArea.addVisitor(visitor);
+    }
+
+    public void transferStaffBetweenAreas(Staff staff, Area originArea, Area destinationArea) {
+        originArea.removeStaff(staff);
+        destinationArea.addStaff(staff);
+    }
+
 
 
 
