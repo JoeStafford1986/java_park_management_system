@@ -45,4 +45,8 @@ public class Area {
     public void removeVisitor(Visitor visitor) {
         this.visitors.remove(visitor);
     }
+
+    public void removeStaff(Staff staff) {
+        this.staffMembers.remove(staff);
+    }
 }

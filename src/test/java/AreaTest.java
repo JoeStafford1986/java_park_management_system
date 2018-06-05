@@ -66,5 +66,12 @@ public class AreaTest {
         assertEquals(0, area.getVisitorsCount());
     }
 
+    @Test
+    public void canRemoveStaffMembers() {
+        area.addStaff(staff);
+        area.removeStaff(staff);
+        assertEquals(0, area.getStaffMembersCount());
+    }
+
 
 }
