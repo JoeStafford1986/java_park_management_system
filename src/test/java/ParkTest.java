@@ -42,6 +42,11 @@ public class ParkTest {
     public void checkVisitorsStartsEmpty() {
         assertEquals(0, park.getVisitorsCount());
     }
+
+    @Test
+    public void checkStaffMembersStartsEmpty() {
+        assertEquals(0, park.getStaffMembersCount());
+    }
 //
 //    //Transfer Tests
 //

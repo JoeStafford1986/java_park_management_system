@@ -1,4 +1,5 @@
 import Animals.AnimalAttraction;
+import People.Staff;
 import People.Visitor;
 
 import java.util.ArrayList;
@@ -6,10 +7,12 @@ import java.util.ArrayList;
 public class Park {
     private ArrayList<Area> areas;
     private ArrayList<Visitor> visitors;
+    private ArrayList<Staff> staffMembers;
 
     public Park() {
         areas = new ArrayList<>();
         visitors = new ArrayList<>();
+        staffMembers = new ArrayList<>();
     }
 
     public int getAreasCount() {
@@ -18,6 +21,10 @@ public class Park {
 
     public int getVisitorsCount() {
         return this.visitors.size();
+    }
+
+    public int getStaffMembersCount() {
+        return this.staffMembers.size();
     }
 
 

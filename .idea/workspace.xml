@@ -28,14 +28,16 @@
       <file leaf-file-name="Park.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Park.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="206">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#581#582#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,14 +46,16 @@
       <file leaf-file-name="ParkTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ParkTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+            <state relative-caret-position="446">
+              <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1489#1490#0" expanded="true" />
                 <element signature="e#1542#1543#0" expanded="true" />
                 <element signature="e#1598#1599#0" expanded="true" />
                 <element signature="e#1654#1655#0" expanded="true" />
+                <element signature="e#1714#1715#0" expanded="true" />
+                <element signature="e#1774#1775#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -567,7 +571,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ParkTest.checkVisitorsStartsEmpty">
+  <component name="RunManager" selected="JUnit.ParkTest.checkStaffMembersStartsEmpty">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -609,26 +613,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="AreaTest.canRemovePaddock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="park_management_system_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AreaTest" />
-      <option name="METHOD_NAME" value="canRemovePaddock" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="AreaTest.canRemoveVisitor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="park_management_system_test" />
@@ -657,6 +641,26 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ParkTest" />
       <option name="METHOD_NAME" value="checkAreasStartsEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ParkTest.checkStaffMembersStartsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="park_management_system_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ParkTest" />
+      <option name="METHOD_NAME" value="checkStaffMembersStartsEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -750,19 +754,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.AreaTest.canRemovePaddock" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AreaTest.canRemoveVisitor" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ParkTest.checkAreasStartsEmpty" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ParkTest.checkVisitorsStartsEmpty" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AreaTest.canRemoveVisitor" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ParkTest.checkAreasStartsEmpty" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ParkTest.checkVisitorsStartsEmpty" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ParkTest.checkStaffMembersStartsEmpty" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ParkTest.checkVisitorsStartsEmpty" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ParkTest.checkAreasStartsEmpty" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AreaTest.canRemoveVisitor" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AreaTest.canRemovePaddock" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ParkTest.checkStaffMembersStartsEmpty" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ParkTest.checkVisitorsStartsEmpty" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ParkTest.checkAreasStartsEmpty" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AreaTest.canRemoveVisitor" />
       </list>
     </recent_temporary>
   </component>
@@ -783,9 +787,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_park_management_system_test - 2018.06.05 at 11h 40m 45s.xml">
-      <configuration name="All in park_management_system_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_park_management_system_test - 2018.06.05 at 11h 54m 22s.xml">
       <configuration name="All in park_management_system_test" configurationId="JUnit" />
     </history-entry>
@@ -809,6 +810,9 @@
     </history-entry>
     <history-entry file="ParkTest_checkAreasStartsEmpty - 2018.06.05 at 13h 44m 14s.xml">
       <configuration name="ParkTest.checkAreasStartsEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParkTest_checkStaffMembersStartsEmpty - 2018.06.05 at 13h 49m 07s.xml">
+      <configuration name="ParkTest.checkStaffMembersStartsEmpty" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ParkTest_checkVisitorsStartsEmpty - 2018.06.05 at 13h 46m 24s.xml">
       <configuration name="ParkTest.checkVisitorsStartsEmpty" configurationId="JUnit" />
@@ -1240,28 +1244,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Park.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="206">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParkTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+        <state relative-caret-position="446">
+          <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1489#1490#0" expanded="true" />
             <element signature="e#1542#1543#0" expanded="true" />
             <element signature="e#1598#1599#0" expanded="true" />
             <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1774#1775#0" expanded="true" />
           </folding>
         </state>
       </provider>
