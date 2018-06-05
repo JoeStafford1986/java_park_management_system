@@ -26,12 +26,12 @@ public abstract class AnimalAttraction implements IEdible {
         return this.diet;
     }
 
-    public int getStomachCount() {
-        return this.stomach.size();
-    }
-
     public boolean checkPlantBased() {
         return this.plantBased;
+    }
+
+    public int getStomachCount() {
+        return this.stomach.size();
     }
 
     public void eat(IEdible edible) {

@@ -137,7 +137,7 @@ public class AvianTest {
 
     @Test
     public void canAddStaffToCarnivoreStomach() {
-        carnivoreAvian.eat(staff);g
+        carnivoreAvian.eat(staff);
         assertEquals(1, carnivoreAvian.getStomachCount());
     }
 }
