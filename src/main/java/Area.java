@@ -1,3 +1,4 @@
+import Animals.AnimalAttraction;
 import People.Staff;
 import People.Visitor;
 
@@ -48,5 +49,14 @@ public class Area {
 
     public void removeStaff(Staff staff) {
         this.staffMembers.remove(staff);
+    }
+
+    public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {
+        int currentDinosaurCount = destinationPaddock.getAnimalAttractionsCount();
+        destinationPaddock.addAnimalAttraction(animalToTransfer);
+        if (destinationPaddock.getAnimalAttractionsCount() == currentDinosaurCount + 1)
+        {
+            originPaddock.removeAnimalAttraction(animalToTransfer);
+        }
     }
 }
