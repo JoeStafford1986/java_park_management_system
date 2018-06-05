@@ -3,8 +3,14 @@ import Animals.AnimalAttraction;
 import java.util.ArrayList;
 
 public class Park {
+    private ArrayList<Area> areas;
 
     public Park() {
+        areas = new ArrayList<>();
+    }
+
+    public int getAreasCount() {
+        return this.areas.size();
     }
 
 
