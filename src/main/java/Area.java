@@ -6,4 +6,8 @@ public class Area {
     public Area() {
         this.paddocks = new ArrayList<>();
     }
+
+    public int getPaddocksCount() {
+        return this.paddocks.size();
+    }
 }
