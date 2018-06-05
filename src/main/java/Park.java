@@ -70,16 +70,4 @@ public class Park {
         originArea.removeStaff(staff);
         destinationArea.addStaff(staff);
     }
-
-
-
-
-    public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {
-        int currentDinosaurCount = destinationPaddock.getAnimalAttractionsCount();
-        destinationPaddock.addAnimalAttraction(animalToTransfer);
-        if (destinationPaddock.getAnimalAttractionsCount() == currentDinosaurCount + 1)
-        {
-            originPaddock.removeAnimalAttraction(animalToTransfer);
-        }
-    }
 }
