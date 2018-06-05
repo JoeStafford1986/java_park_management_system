@@ -58,4 +58,13 @@ public class AreaTest {
         area.removePaddock(enclosedPaddock);
         assertEquals(0, area.getPaddocksCount());
     }
+
+    @Test
+    public void canRemoveVisitor() {
+        area.addVisitor(visitor);
+        area.removeVisitor(visitor);
+        assertEquals(0, area.getVisitorsCount());
+    }
+
+
 }

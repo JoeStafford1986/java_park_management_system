@@ -41,4 +41,8 @@ public class Area {
     public void removePaddock(Paddock paddock) {
         this.paddocks.remove(paddock);
     }
+
+    public void removeVisitor(Visitor visitor) {
+        this.visitors.remove(visitor);
+    }
 }
