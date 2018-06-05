@@ -45,6 +45,10 @@ public class Park {
         this.staffMembers.add(staff);
     }
 
+    public void addAnimalAttraction(AnimalAttraction animalAttraction) {
+        this.animalAttractions.add(animalAttraction);
+    }
+
     public void removeVisitor(Visitor visitor) {
         this.visitors.remove(visitor);
     }

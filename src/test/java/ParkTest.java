@@ -14,6 +14,7 @@ public class ParkTest {
     private Area area;
     private Visitor visitor;
     private Staff staff;
+    private Terrestrial animalAttraction;
 //    private Paddock originEnclosedPaddock;
 //    private Paddock destinationEnclosedPaddock;
 //    private Paddock destinationNonEnclosedPaddock;
@@ -30,6 +31,7 @@ public class ParkTest {
         area = new Area();
         visitor = new Visitor("Jo Malo");
         staff = new Staff("Robert Muldoon");
+        animalAttraction = new Terrestrial("Velocirapter", DietType.CARNIVORE);
 //        originEnclosedPaddock = new Paddock(true);
 //        destinationEnclosedPaddock = new Paddock(true);
 //        destinationNonEnclosedPaddock = new Paddock(false);
@@ -77,6 +79,12 @@ public class ParkTest {
     public void canAddStaffMemberToPark() {
         park.addStaffMember(staff);
         assertEquals(1, park.getStaffMembersCount());
+    }
+
+    @Test
+    public void canAddAnimalAttractionToPark() {
+        park.addAnimalAttraction(animalAttraction);
+        assertEquals(1, park.getAnimalAttractionsCount());
     }
 
     @Test
