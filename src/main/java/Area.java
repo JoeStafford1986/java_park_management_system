@@ -28,4 +28,8 @@ public class Area {
     public void addPaddock(Paddock paddock) {
         this.paddocks.add(paddock);
     }
+
+    public void addVisitor(Visitor visitor) {
+        this.visitors.add(visitor);
+    }
 }
