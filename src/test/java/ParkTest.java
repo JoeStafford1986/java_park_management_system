@@ -57,6 +57,11 @@ public class ParkTest {
     }
 
     @Test
+    public void checkAnimalAttractionsStartsEmpty() {
+        assertEquals(0, park.getAnimalAttractionsCount());
+    }
+
+    @Test
     public void canAddAreasToPark() {
         park.addArea(area);
         assertEquals(1, park.getAreasCount());
@@ -87,6 +92,8 @@ public class ParkTest {
         park.removeStaffMember(staff);
         assertEquals(0, park.getStaffMembersCount());
     }
+
+
 //
 //    //Transfer Tests
 //
