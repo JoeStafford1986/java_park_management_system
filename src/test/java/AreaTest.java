@@ -51,4 +51,11 @@ public class AreaTest {
         area.addStaff(staff);
         assertEquals(1, area.getStaffMembersCount());
     }
+
+    @Test
+    public void canRemovePaddock() {
+        area.addPaddock(enclosedPaddock);
+        area.removePaddock(enclosedPaddock);
+        assertEquals(0, area.getPaddocksCount());
+    }
 }

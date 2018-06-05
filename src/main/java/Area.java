@@ -37,4 +37,8 @@ public class Area {
     public void addStaff(Staff staff) {
         this.staffMembers.add(staff);
     }
+
+    public void removePaddock(Paddock paddock) {
+        this.paddocks.remove(paddock);
+    }
 }
