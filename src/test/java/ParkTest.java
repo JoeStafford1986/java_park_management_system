@@ -37,6 +37,11 @@ public class ParkTest {
     public void checkAreasStartsEmpty() {
         assertEquals(0, park.getAreasCount());
     }
+
+    @Test
+    public void checkVisitorsStartsEmpty() {
+        assertEquals(0, park.getVisitorsCount());
+    }
 //
 //    //Transfer Tests
 //
