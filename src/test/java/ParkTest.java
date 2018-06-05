@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ParkTest {
     private Park park;
+    private Area area;
 //    private Paddock originEnclosedPaddock;
 //    private Paddock destinationEnclosedPaddock;
 //    private Paddock destinationNonEnclosedPaddock;
@@ -22,6 +23,7 @@ public class ParkTest {
     @Before
     public void before() {
         park = new Park();
+        area = new Area();
 //        originEnclosedPaddock = new Paddock(true);
 //        destinationEnclosedPaddock = new Paddock(true);
 //        destinationNonEnclosedPaddock = new Paddock(false);
@@ -46,6 +48,12 @@ public class ParkTest {
     @Test
     public void checkStaffMembersStartsEmpty() {
         assertEquals(0, park.getStaffMembersCount());
+    }
+
+    @Test
+    public void canAddAreasToPark() {
+        park.addArea(area);
+        assertEquals(1, park.getAreasCount());
     }
 //
 //    //Transfer Tests

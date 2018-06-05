@@ -27,6 +27,10 @@ public class Park {
         return this.staffMembers.size();
     }
 
+    public void addArea(Area area) {
+        this.areas.add(area);
+    }
+
 
 
     public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {
