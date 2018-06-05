@@ -15,4 +15,9 @@ public class AreaTest {
     public void checkPaddocksStartEmpty() {
         assertEquals(0, area.getPaddocksCount());
     }
+
+    @Test
+    public void checkVisitorsStartEmpty() {
+        assertEquals(0, area.getVisitorsCount());
+    }
 }
