@@ -24,4 +24,8 @@ public class Area {
     public int getStaffMembersCount() {
         return this.staffMembers.size();
     }
+
+    public void addPaddock(Paddock paddock) {
+        this.paddocks.add(paddock);
+    }
 }
