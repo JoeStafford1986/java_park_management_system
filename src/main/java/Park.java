@@ -43,6 +43,11 @@ public class Park {
         this.visitors.remove(visitor);
     }
 
+    public void removeStaffMember(Staff staff) {
+        this.staffMembers.remove(staff);
+    }
+
+
 
 
     public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {

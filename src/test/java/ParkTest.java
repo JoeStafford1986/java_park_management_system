@@ -80,6 +80,13 @@ public class ParkTest {
         park.removeVisitor(visitor);
         assertEquals(0, park.getVisitorsCount());
     }
+
+    @Test
+    public void canRemoveStaffMembersFromPark() {
+        park.addStaffMember(staff);
+        park.removeStaffMember(staff);
+        assertEquals(0, park.getStaffMembersCount());
+    }
 //
 //    //Transfer Tests
 //
