@@ -20,4 +20,9 @@ public class AreaTest {
     public void checkVisitorsStartEmpty() {
         assertEquals(0, area.getVisitorsCount());
     }
+
+    @Test
+    public void checkStaffMembersStartsEmpty() {
+        assertEquals(0, area.getStaffMembersCount());
+    }
 }
