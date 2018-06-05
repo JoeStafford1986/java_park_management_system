@@ -35,6 +35,14 @@ public class Park {
         this.visitors.add(visitor);
     }
 
+    public void addStaffMember(Staff staff) {
+        this.staffMembers.add(staff);
+    }
+
+    public void removeVisitor(Visitor visitor) {
+        this.visitors.remove(visitor);
+    }
+
 
 
     public void transferAnimalAttractionBetweenPaddocks(AnimalAttraction animalToTransfer, Paddock originPaddock, Paddock destinationPaddock) {

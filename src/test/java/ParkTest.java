@@ -2,6 +2,7 @@ import Animals.AnimalAttraction;
 import Animals.Avian;
 import Animals.Terrestrial;
 import Enums.DietType;
+import People.Staff;
 import People.Visitor;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,7 @@ public class ParkTest {
     private Park park;
     private Area area;
     private Visitor visitor;
+    private Staff staff;
 //    private Paddock originEnclosedPaddock;
 //    private Paddock destinationEnclosedPaddock;
 //    private Paddock destinationNonEnclosedPaddock;
@@ -27,6 +29,7 @@ public class ParkTest {
         park = new Park();
         area = new Area();
         visitor = new Visitor("Jo Malo");
+        staff = new Staff("Robert Muldoon");
 //        originEnclosedPaddock = new Paddock(true);
 //        destinationEnclosedPaddock = new Paddock(true);
 //        destinationNonEnclosedPaddock = new Paddock(false);
@@ -63,6 +66,19 @@ public class ParkTest {
     public void canAddVisitorsToPark() {
         park.addVisitor(visitor);
         assertEquals(1, park.getVisitorsCount());
+    }
+
+    @Test
+    public void canAddStaffMemberToPark() {
+        park.addStaffMember(staff);
+        assertEquals(1, park.getStaffMembersCount());
+    }
+
+    @Test
+    public void canRemoveVisitorFromPark() {
+        park.addVisitor(visitor);
+        park.removeVisitor(visitor);
+        assertEquals(0, park.getVisitorsCount());
     }
 //
 //    //Transfer Tests
