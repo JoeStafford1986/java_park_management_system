@@ -108,6 +108,24 @@ public class TerrestrialTest {
         assertEquals(1, omnivoreTerrestrial.getStomachCount());
     }
 
+    @Test
+    public void canGetAllCaloricContentInOmnivoreStomachSingleIEdible() {
+        omnivoreTerrestrial.eat(staff);
+        assertEquals(4500, omnivoreTerrestrial.getCaloricContentInStomach());
+    }
+
+    @Test
+    public void canGetAllCaloricContentInOmnivoreStomachMultipleIEdible() {
+        omnivoreTerrestrial.eat(staff);
+        omnivoreTerrestrial.eat(plantBasedFeed);
+        assertEquals(5000, omnivoreTerrestrial.getCaloricContentInStomach());
+    }
+
+    @Test
+    public void canGetAllCaloricContentInOmnivoreStomachEmptyStomach() {
+        assertEquals(0, omnivoreTerrestrial.getCaloricContentInStomach());
+    }
+
     //Herbivore Feeding tests
 
     @Test

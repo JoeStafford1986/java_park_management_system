@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25fe7f7-6cca-49d1-8626-b3c0a0e9314a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/AvianTest.java" afterPath="$PROJECT_DIR$/src/test/java/AvianTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" afterPath="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AvianTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AvianTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/AvianTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="169" column="41" lean-forward="false" selection-start-line="169" selection-start-column="41" selection-end-line="169" selection-end-column="41" />
+            <state relative-caret-position="32">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="120" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1049#1050#0" expanded="true" />
@@ -41,6 +41,30 @@
                 <element signature="e#1508#1509#0" expanded="true" />
                 <element signature="e#1564#1565#0" expanded="true" />
                 <element signature="e#1638#1639#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerrestrialTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TerrestrialTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="120" column="23" lean-forward="false" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#1374#1375#0" expanded="true" />
+                <element signature="e#1449#1450#0" expanded="true" />
+                <element signature="e#1504#1505#0" expanded="true" />
+                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1657#1658#0" expanded="true" />
+                <element signature="e#1735#1736#0" expanded="true" />
+                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="e#1877#1878#0" expanded="true" />
+                <element signature="e#1939#1940#0" expanded="true" />
+                <element signature="e#2019#2020#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -430,12 +454,12 @@
         <option value="$PROJECT_DIR$/src/test/java/AreaTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaddockTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParkTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/FeedTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/StaffTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VisitorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Animals/AnimalAttraction.java" />
         <option value="$PROJECT_DIR$/src/test/java/AvianTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TerrestrialTest.java" />
       </list>
     </option>
   </component>
@@ -790,6 +814,9 @@
     <history-entry file="All_in_park_management_system_test - 2018.06.06 at 10h 26m 54s.xml">
       <configuration name="All in park_management_system_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_park_management_system_test - 2018.06.06 at 10h 28m 25s.xml">
+      <configuration name="All in park_management_system_test" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="AvianTest_canGetAllCaloricContentInStomachEmptyStomach - 2018.06.06 at 10h 21m 52s.xml">
       <configuration name="AvianTest.canGetAllCaloricContentInStomachEmptyStomach" configurationId="JUnit" />
     </history-entry>
@@ -798,9 +825,6 @@
     </history-entry>
     <history-entry file="AvianTest_canGetAllCaloricContentInStomachSingleIEdible - 2018.06.06 at 10h 19m 47s.xml">
       <configuration name="AvianTest.canGetAllCaloricContentInStomachSingleIEdible" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedTest_canGetCaloricContent - 2018.06.06 at 09h 47m 44s.xml">
-      <configuration name="FeedTest.canGetCaloricContent" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StaffTest_canGetCaloricContent - 2018.06.06 at 09h 50m 11s.xml">
       <configuration name="StaffTest.canGetCaloricContent" configurationId="JUnit" />
@@ -1211,28 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TerrestrialTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-            <element signature="e#1449#1450#0" expanded="true" />
-            <element signature="e#1504#1505#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1735#1736#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-            <element signature="e#1877#1878#0" expanded="true" />
-            <element signature="e#1939#1940#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VisitorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1281,8 +1283,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AvianTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="169" column="41" lean-forward="false" selection-start-line="169" selection-start-column="41" selection-end-line="169" selection-end-column="41" />
+        <state relative-caret-position="32">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="120" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1049#1050#0" expanded="true" />
@@ -1295,6 +1297,28 @@
             <element signature="e#1508#1509#0" expanded="true" />
             <element signature="e#1564#1565#0" expanded="true" />
             <element signature="e#1638#1639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TerrestrialTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="120" column="23" lean-forward="false" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1877#1878#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+            <element signature="e#2019#2020#0" expanded="true" />
           </folding>
         </state>
       </provider>
