@@ -19,7 +19,7 @@ public class VisitorTest {
 
     @Test
     public void canSetCaloricContent() {
-        visitor.setCaloricContent(g);
+        visitor.setCaloricContent(900);
         assertEquals(900, visitor.getCaloricContent());
     }
 

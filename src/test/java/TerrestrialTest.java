@@ -25,9 +25,9 @@ public class TerrestrialTest {
         herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000, 2000);
         carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000, 2000);
         plantBasedFeed = new Feed(true, 500);
-        nonPlantBasedFeed = new Feed(false, 1000);
+        nonPlantBasedFeed = new Feed(false, 500);
         plantBasedIEdible = new Feed(true, 500);
-        nonPlantBasedIEdible = new Feed(false, 1000);
+        nonPlantBasedIEdible = new Feed(false, 500);
         visitor = new Visitor("Euan Bell", 3500);
         staff = new Staff("Dennis Nedry", 4500);
     }
@@ -265,11 +265,23 @@ public class TerrestrialTest {
 
     //Digestion Tests
 
-//    @Test
-//    public void canDigestFood() {
-//        carnivoreTerrestrial.eat(staff);
-//        carnivoreTerrestrial.digestFood(1);
-//        assertEquals(4400, staff.getCaloricContent());
-//        assertEquals(4400, carnivoreTerrestrial.getCaloricContentInStomach());
-//    }
+    @Test
+    public void canDigestFoodEnoughCalories() {
+        carnivoreTerrestrial.eat(staff);
+        carnivoreTerrestrial.digestFood(1);
+        assertEquals(2500, staff.getCaloricContent());
+        assertEquals(2500, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
+
+    @Test
+    public void canDigestFoodMultipleSmallMealsEnoughCalories() {
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.digestFood(1);
+        assertEquals(0, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(0, carnivoreTerrestrial.getStomachCount());
+    }
 }

@@ -65,7 +65,58 @@ public abstract class AnimalAttraction implements IEdible {
         return allCalories;
     }
 
-//    public digestFood(int hours) {
-//
-//    }
+    public void satiateAppetite(int hours) {
+        for (int i = 0; i < hours; i++) {
+            if (this.getCaloricContentInStomach() < this.requiredDailyCalories) {
+                this.attemptEscape();
+                return;
+            } else {
+                int caloriesNeeded = this.requiredDailyCalories;
+                ArrayList<IEdible> digestedFood = new ArrayList<>();
+                for (IEdible foodInStomach : this.stomach) {
+                    caloriesNeeded -= foodInStomach.getCaloricContent();
+                    if (foodInStomach.getCaloricContent() <= (this.requiredDailyCalories - caloriesNeeded)) {
+                        digestedFood.add(foodInStomach);
+                    } else {
+                        foodInStomach.setCaloricContent(this.requiredDailyCalories - caloriesNeeded);
+                        return;
+                    }
+                }
+                for (IEdible foodInStomach : digestedFood) {
+                    if (digestedFood.contains(foodInStomach)) {
+                        this.stomach.remove(foodInStomach);
+                    }
+                }
+            }
+        }
+    }
+
+    public void digestFood(int days) {
+        for (int i = 0; i < days; i++) {
+            if (this.getCaloricContentInStomach() < this.requiredDailyCalories) {
+                this.attemptEscape();
+                return;
+            } else {
+                int caloriesNeeded = this.requiredDailyCalories;
+                ArrayList<IEdible> digestedFood = new ArrayList<>();
+                for (IEdible foodInStomach : this.stomach) {
+                    if (caloriesNeeded >= foodInStomach.getCaloricContent()) {
+                        caloriesNeeded -= foodInStomach.getCaloricContent();
+                        digestedFood.add(foodInStomach);
+                    } else {
+                        foodInStomach.setCaloricContent(foodInStomach.getCaloricContent() - caloriesNeeded);
+                    }
+                }
+                for (IEdible foodInStomach : digestedFood) {
+                    if (digestedFood.contains(foodInStomach)) {
+                        this.stomach.remove(foodInStomach);
+                    }
+                }
+            }
+        }
+    }
+
+    public boolean attemptEscape() {
+        return true;
+    }
 }
