@@ -42,6 +42,11 @@ public class TerrestrialTest {
         assertEquals(1000, omnivoreTerrestrial.getCaloricContent());
     }
 
+    @Test
+    public void canSetCaloricContent() {
+        omnivoreTerrestrial.setCaloricContent(900);
+        assertEquals(900, omnivoreTerrestrial.getCaloricContent());
+    }
 
     @Test
     public void canGetDailyRequiredCalories() {
@@ -257,4 +262,14 @@ public class TerrestrialTest {
     public void canGetAllCaloricContentInCarnivoreStomachEmptyStomach() {
         assertEquals(0, carnivoreTerrestrial.getCaloricContentInStomach());
     }
+
+    //Digestion Tests
+
+//    @Test
+//    public void canDigestFood() {
+//        carnivoreTerrestrial.eat(staff);
+//        carnivoreTerrestrial.digestFood(1);
+//        assertEquals(4400, staff.getCaloricContent());
+//        assertEquals(4400, carnivoreTerrestrial.getCaloricContentInStomach());
+//    }
 }

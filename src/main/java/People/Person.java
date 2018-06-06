@@ -21,6 +21,10 @@ public abstract class Person implements IEdible {
         return this.caloricContent;
     }
 
+    public void setCaloricContent(int newCaloricContent) {
+        this.caloricContent = newCaloricContent;
+    }
+
     public boolean checkPlantBased() {
         return this.plantBased;
     }

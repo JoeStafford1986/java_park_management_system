@@ -34,6 +34,10 @@ public abstract class AnimalAttraction implements IEdible {
         return this.caloricContent;
     }
 
+    public void setCaloricContent(int newCaloricContent) {
+        this.caloricContent = newCaloricContent;
+    }
+
     public int getRequiredDailyCalories() {
         return this.requiredDailyCalories;
     }
@@ -60,4 +64,8 @@ public abstract class AnimalAttraction implements IEdible {
         }
         return allCalories;
     }
+
+//    public digestFood(int hours) {
+//
+//    }
 }
