@@ -13,6 +13,11 @@ public class StaffTest {
     }
 
     @Test
+    public void canGetCaloricContent() {
+        assertEquals(3500, staff.getCaloricContent());
+    }
+
+    @Test
     public void canGetName() {
         assertEquals("Dennis Nedry", staff.getName());
     }

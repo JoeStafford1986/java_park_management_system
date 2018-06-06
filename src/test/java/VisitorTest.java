@@ -13,6 +13,11 @@ public class VisitorTest {
     }
 
     @Test
+    public void canGetCaloricContent() {
+        assertEquals(2500, visitor.getCaloricContent());
+    }
+
+    @Test
     public void canGetName() {
         assertEquals("Euan Bell", visitor.getName());
     }
