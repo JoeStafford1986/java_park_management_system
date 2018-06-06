@@ -46,4 +46,12 @@ public abstract class AnimalAttraction implements IEdible {
         }
         this.stomach.add(edible);
     }
+
+    public int getCaloricContentInStomach() {
+        int allCalories = 0;
+        for (IEdible food : stomach) {
+            allCalories += food.getCaloricContent();
+        }
+        return allCalories;
+    }
 }
