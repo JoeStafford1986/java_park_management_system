@@ -21,8 +21,8 @@ public class AvianTest {
 
     @Before
     public void dinosaur() {
-        omnivoreAvian = new Avian("Ornithomimus", DietType.OMNIVORE, 1000);
-        carnivoreAvian = new Avian("Pteranodon", DietType.CARNIVORE, 1000);
+        omnivoreAvian = new Avian("Ornithomimus", DietType.OMNIVORE, 1000, 2000);
+        carnivoreAvian = new Avian("Pteranodon", DietType.CARNIVORE, 1000, 2000);
         plantBasedFeed = new Feed(true, 500);
         nonPlantBasedFeed = new Feed(false, 1000);
         plantBasedIEdible = new Feed(true, 500);
@@ -39,6 +39,11 @@ public class AvianTest {
     @Test
     public void canGetCaloricContent() {
         assertEquals(1000, omnivoreAvian.getCaloricContent());
+    }
+
+    @Test
+    public void canGetDailyRequiredCalories() {
+        assertEquals(2000, omnivoreAvian.getRequiredDailyCalories());
     }
 
     @Test

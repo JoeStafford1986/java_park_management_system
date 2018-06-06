@@ -21,9 +21,9 @@ public class TerrestrialTest {
 
     @Before
     public void dinosaur() {
-        omnivoreTerrestrial = new Terrestrial("Gallimimus", DietType.OMNIVORE, 1000);
-        herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000);
-        carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
+        omnivoreTerrestrial = new Terrestrial("Gallimimus", DietType.OMNIVORE, 1000, 2000);
+        herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000, 2000);
+        carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000, 2000);
         plantBasedFeed = new Feed(true, 500);
         nonPlantBasedFeed = new Feed(false, 1000);
         plantBasedIEdible = new Feed(true, 500);

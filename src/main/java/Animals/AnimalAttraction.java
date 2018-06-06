@@ -9,13 +9,15 @@ public abstract class AnimalAttraction implements IEdible {
     private String genera;
     private DietType diet;
     private int caloricContent;
+    private int requiredDailyCalories;
     private boolean plantBased;
     private ArrayList<IEdible> stomach;
 
-    public AnimalAttraction(String genera, DietType diet, int caloricContent) {
+    public AnimalAttraction(String genera, DietType diet, int caloricContent, int requiredDailyCalories) {
         this.genera = genera;
         this.diet = diet;
         this.caloricContent = caloricContent;
+        this.requiredDailyCalories = requiredDailyCalories;
         this.stomach = new ArrayList<>();
         this.plantBased = false;
     }
@@ -30,6 +32,10 @@ public abstract class AnimalAttraction implements IEdible {
 
     public int getCaloricContent() {
         return this.caloricContent;
+    }
+
+    public int getRequiredDailyCalories() {
+        return this.requiredDailyCalories;
     }
 
     public boolean checkPlantBased() {

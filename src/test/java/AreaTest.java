@@ -32,12 +32,12 @@ public class AreaTest {
         originEnclosedPaddock = new Paddock(true);
         destinationEnclosedPaddock = new Paddock(true);
         destinationNonEnclosedPaddock = new Paddock(false);
-        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000);
-        herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE, 20000);
-        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
-        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE, 20000);
-        carnivoreTerrestrial3 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
-        carnivoreAvian1 = new Avian("Sinosauropteryx", DietType.CARNIVORE, 1000);
+        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000, 2000);
+        herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE, 20000, 2000);
+        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000, 2000);
+        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE, 20000, 2000);
+        carnivoreTerrestrial3 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000, 2000);
+        carnivoreAvian1 = new Avian("Sinosauropteryx", DietType.CARNIVORE, 1000, 2000);
     }
 
     @Test

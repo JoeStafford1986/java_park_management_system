@@ -24,7 +24,7 @@ public class ParkTest {
         area = new Area();
         visitor = new Visitor("Jo Malo", 2500);
         staff = new Staff("Robert Muldoon", 2500);
-        animalAttraction = new Terrestrial("Velocirapter", DietType.CARNIVORE, 2000);
+        animalAttraction = new Terrestrial("Velocirapter", DietType.CARNIVORE, 2000, 2000);
         originArea = new Area();
         destinationArea = new Area();
     }
