@@ -103,23 +103,22 @@ public class AvianTest {
     }
 
     @Test
-    public void canGetAllCaloricContentInStomachSingleIEdible() {
+    public void canGetAllCaloricContentInOmnivoreStomachSingleIEdible() {
         omnivoreAvian.eat(staff);
         assertEquals(4000, omnivoreAvian.getCaloricContentInStomach());
     }
 
     @Test
-    public void canGetAllCaloricContentInStomachMultipleIEdible() {
+    public void canGetAllCaloricContentInOmnivoreStomachMultipleIEdible() {
         omnivoreAvian.eat(staff);
         omnivoreAvian.eat(plantBasedFeed);
         assertEquals(4500, omnivoreAvian.getCaloricContentInStomach());
     }
 
     @Test
-    public void canGetAllCaloricContentInStomachEmptyStomach() {
+    public void canGetAllCaloricContentInOmnivoreStomachEmptyStomach() {
         assertEquals(0, omnivoreAvian.getCaloricContentInStomach());
     }
-
 
     //Carnivore Feeding tests
 
@@ -163,5 +162,24 @@ public class AvianTest {
     public void canAddStaffToCarnivoreStomach() {
         carnivoreAvian.eat(staff);
         assertEquals(1, carnivoreAvian.getStomachCount());
+    }
+
+    @Test
+    public void canGetAllCaloricContentInCarnivoreStomachSingleIEdible() {
+        carnivoreAvian.eat(staff);
+        assertEquals(4000, carnivoreAvian.getCaloricContentInStomach());
+    }
+
+    @Test
+    public void canGetAllCaloricContentInCarnivoreStomachMultipleIEdibleAndPlantBased() {
+        carnivoreAvian.eat(staff);
+        carnivoreAvian.eat(visitor);
+        carnivoreAvian.eat(plantBasedFeed);
+        assertEquals(7000, carnivoreAvian.getCaloricContentInStomach());
+    }
+
+    @Test
+    public void canGetAllCaloricContentInCarnivoreStomachEmptyStomach() {
+        assertEquals(0, carnivoreAvian.getCaloricContentInStomach());
     }
 }
