@@ -32,8 +32,13 @@ public class AvianTest {
     }
 
     @Test
-    public void getGenera() {
+    public void canGetGenera() {
         assertEquals("Pteranodon", carnivoreAvian.getGenera());
+    }
+
+    @Test
+    public void canGetCaloricContent() {
+        assertEquals(1000, omnivoreAvian.getCaloricContent());
     }
 
     @Test

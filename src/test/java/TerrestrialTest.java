@@ -33,7 +33,7 @@ public class TerrestrialTest {
     }
 
     @Test
-    public void getGenera() {
+    public void canGetGenera() {
         assertEquals("Velociraptor", carnivoreTerrestrial.getGenera());
     }
 
