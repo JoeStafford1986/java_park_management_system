@@ -42,6 +42,12 @@ public class AvianTest {
     }
 
     @Test
+    public void canSetCaloricContent() {
+        omnivoreAvian.setCaloricContent(900);
+        assertEquals(900, omnivoreAvian.getCaloricContent());
+    }
+
+    @Test
     public void canGetDailyRequiredCalories() {
         assertEquals(2000, omnivoreAvian.getRequiredDailyCalories());
     }

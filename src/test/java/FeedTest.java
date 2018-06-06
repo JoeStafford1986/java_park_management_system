@@ -18,6 +18,12 @@ public class FeedTest {
     }
 
     @Test
+    public void canSetCaloricContent() {
+        feed.setCaloricContent(400);
+        assertEquals(400, feed.getCaloricContent());
+    }
+
+    @Test
     public void canCheckPlantBasedTrue() {
         assertEquals(true, feed.checkPlantBased());
     }
