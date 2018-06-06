@@ -42,6 +42,12 @@ public class TerrestrialTest {
         assertEquals(1000, omnivoreTerrestrial.getCaloricContent());
     }
 
+
+    @Test
+    public void canGetDailyRequiredCalories() {
+        assertEquals(2000, omnivoreTerrestrial.getRequiredDailyCalories());
+    }
+
     @Test
     public void checkStomachStartsEmpty() {
         assertEquals(0, omnivoreTerrestrial.getStomachCount());
