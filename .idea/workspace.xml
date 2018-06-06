@@ -27,8 +27,8 @@
       <file leaf-file-name="AvianTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AvianTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
+            <state relative-caret-position="416">
+              <caret line="119" column="22" lean-forward="false" selection-start-line="119" selection-start-column="22" selection-end-line="119" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1049#1050#0" expanded="true" />
@@ -562,7 +562,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AvianTest.canGetAllCaloricContentInStomachMultipleIEdible">
+  <component name="RunManager" selected="JUnit.AvianTest.canGetAllCaloricContentInStomachEmptyStomach">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -604,6 +604,26 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="AvianTest.canGetAllCaloricContentInStomachEmptyStomach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="park_management_system_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AvianTest" />
+      <option name="METHOD_NAME" value="canGetAllCaloricContentInStomachEmptyStomach" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="AvianTest.canGetAllCaloricContentInStomachMultipleIEdible" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="park_management_system_test" />
@@ -632,26 +652,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AvianTest" />
       <option name="METHOD_NAME" value="canGetAllCaloricContentInStomachSingleIEdible" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="StaffTest.canGetCaloricContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="park_management_system_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StaffTest" />
-      <option name="METHOD_NAME" value="canGetCaloricContent" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -746,18 +746,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StaffTest.canGetCaloricContent" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.VisitorTest.canGetCaloricContent" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachSingleIEdible" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachMultipleIEdible" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.VisitorTest.canGetCaloricContent" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachSingleIEdible" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachMultipleIEdible" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachEmptyStomach" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachMultipleIEdible" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachSingleIEdible" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.VisitorTest.canGetCaloricContent" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StaffTest.canGetCaloricContent" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachEmptyStomach" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachMultipleIEdible" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AvianTest.canGetAllCaloricContentInStomachSingleIEdible" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in park_management_system_test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.VisitorTest.canGetCaloricContent" />
       </list>
     </recent_temporary>
   </component>
@@ -778,14 +778,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_park_management_system_test - 2018.06.06 at 09h 14m 17s.xml">
-      <configuration name="All in park_management_system_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_park_management_system_test - 2018.06.06 at 09h 47m 55s.xml">
       <configuration name="All in park_management_system_test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_park_management_system_test - 2018.06.06 at 09h 50m 55s.xml">
       <configuration name="All in park_management_system_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AvianTest_canGetAllCaloricContentInStomachEmptyStomach - 2018.06.06 at 10h 21m 52s.xml">
+      <configuration name="AvianTest.canGetAllCaloricContentInStomachEmptyStomach" configurationId="JUnit" />
     </history-entry>
     <history-entry file="AvianTest_canGetAllCaloricContentInStomachMultipleIEdible - 2018.06.06 at 10h 21m 00s.xml">
       <configuration name="AvianTest.canGetAllCaloricContentInStomachMultipleIEdible" configurationId="JUnit" />
@@ -1281,8 +1281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/AvianTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="112" column="18" lean-forward="true" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
+        <state relative-caret-position="416">
+          <caret line="119" column="22" lean-forward="false" selection-start-line="119" selection-start-column="22" selection-end-line="119" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1049#1050#0" expanded="true" />

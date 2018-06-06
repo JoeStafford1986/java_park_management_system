@@ -115,6 +115,12 @@ public class AvianTest {
         assertEquals(4500, omnivoreAvian.getCaloricContentInStomach());
     }
 
+    @Test
+    public void canGetAllCaloricContentInStomachEmptyStomach() {
+        assertEquals(0, omnivoreAvian.getCaloricContentInStomach());
+    }
+
+
     //Carnivore Feeding tests
 
     @Test
