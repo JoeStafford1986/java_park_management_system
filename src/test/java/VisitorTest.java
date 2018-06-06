@@ -9,7 +9,7 @@ public class VisitorTest {
 
     @Before
     public void before() {
-        visitor = new Visitor("Euan Bell");
+        visitor = new Visitor("Euan Bell", 2500);
     }
 
     @Test

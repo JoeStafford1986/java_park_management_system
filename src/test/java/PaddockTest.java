@@ -21,13 +21,13 @@ public class PaddockTest {
     public void before() {
         paddockNotEnclosed = new Paddock(false);
         paddockEnclosed = new Paddock(true);
-        omnivoreTerrestrial1 = new Terrestrial("Gallimimus", DietType.OMNIVORE);
-        omnivoreTerrestrial2 = new Terrestrial("Oviraptor", DietType.OMNIVORE);
-        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
-        herbivoreTerrestrial2 = new Terrestrial("Triceratops", DietType.HERBIVORE);
-        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE);
-        carnivoreAvian = new Avian("Sinosauropteryx", DietType.CARNIVORE);
+        omnivoreTerrestrial1 = new Terrestrial("Gallimimus", DietType.OMNIVORE, 1000);
+        omnivoreTerrestrial2 = new Terrestrial("Oviraptor", DietType.OMNIVORE, 1500);
+        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000);
+        herbivoreTerrestrial2 = new Terrestrial("Triceratops", DietType.HERBIVORE, 10000);
+        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
+        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE, 20000);
+        carnivoreAvian = new Avian("Sinosauropteryx", DietType.CARNIVORE, 1000);
     }
 
     @Test

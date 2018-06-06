@@ -9,7 +9,7 @@ public class StaffTest {
 
     @Before
     public void before() {
-        staff = new Staff("Dennis Nedry");
+        staff = new Staff("Dennis Nedry", 3500);
     }
 
     @Test

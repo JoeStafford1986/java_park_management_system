@@ -21,15 +21,15 @@ public class TerrestrialTest {
 
     @Before
     public void dinosaur() {
-        omnivoreTerrestrial = new Terrestrial("Gallimimus", DietType.OMNIVORE);
-        herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
-        carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-        plantBasedFeed = new Feed(true);
-        nonPlantBasedFeed = new Feed(false);
-        plantBasedIEdible = new Feed(true);
-        nonPlantBasedIEdible = new Feed(false);
-        visitor = new Visitor("Euan Bell");
-        staff = new Staff("Dennis Nedry");
+        omnivoreTerrestrial = new Terrestrial("Gallimimus", DietType.OMNIVORE, 1000);
+        herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000);
+        carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
+        plantBasedFeed = new Feed(true, 500);
+        nonPlantBasedFeed = new Feed(false, 1000);
+        plantBasedIEdible = new Feed(true, 500);
+        nonPlantBasedIEdible = new Feed(false, 1000);
+        visitor = new Visitor("Euan Bell", 3500);
+        staff = new Staff("Dennis Nedry", 4500);
     }
 
     @Test

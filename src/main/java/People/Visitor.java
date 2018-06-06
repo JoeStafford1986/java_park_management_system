@@ -2,7 +2,7 @@ package People;
 
 public class Visitor extends Person {
 
-    public Visitor(String name) {
-        super(name);
+    public Visitor(String name, int caloricContent) {
+        super(name, caloricContent);
     }
 }

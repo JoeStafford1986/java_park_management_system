@@ -8,12 +8,14 @@ import java.util.ArrayList;
 public abstract class AnimalAttraction implements IEdible {
     private String genera;
     private DietType diet;
+    private int caloricContent;
     private boolean plantBased;
     private ArrayList<IEdible> stomach;
 
-    public AnimalAttraction(String genera, DietType diet) {
+    public AnimalAttraction(String genera, DietType diet, int caloricContent) {
         this.genera = genera;
         this.diet = diet;
+        this.caloricContent = caloricContent;
         this.stomach = new ArrayList<>();
         this.plantBased = false;
     }
@@ -24,6 +26,10 @@ public abstract class AnimalAttraction implements IEdible {
 
     public DietType getDiet() {
         return this.diet;
+    }
+
+    public int getCaloricContent() {
+        return this.caloricContent;
     }
 
     public boolean checkPlantBased() {

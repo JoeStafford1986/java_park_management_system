@@ -21,14 +21,14 @@ public class AvianTest {
 
     @Before
     public void dinosaur() {
-        omnivoreAvian = new Avian("Ornithomimus", DietType.OMNIVORE);
-        carnivoreAvian = new Avian("Pteranodon", DietType.CARNIVORE);
-        plantBasedFeed = new Feed(true);
-        nonPlantBasedFeed = new Feed(false);
-        plantBasedIEdible = new Feed(true);
-        nonPlantBasedIEdible = new Feed(false);
-        visitor = new Visitor("Euan Bell");
-        staff = new Staff("Dennis Nedry");
+        omnivoreAvian = new Avian("Ornithomimus", DietType.OMNIVORE, 1000);
+        carnivoreAvian = new Avian("Pteranodon", DietType.CARNIVORE, 1000);
+        plantBasedFeed = new Feed(true, 500);
+        nonPlantBasedFeed = new Feed(false, 1000);
+        plantBasedIEdible = new Feed(true, 500);
+        nonPlantBasedIEdible = new Feed(false, 1000);
+        visitor = new Visitor("Euan Bell", 3000);
+        staff = new Staff("Dennis Nedry", 4000);
     }
 
     @Test

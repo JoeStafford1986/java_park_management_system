@@ -22,9 +22,9 @@ public class ParkTest {
     public void before() {
         park = new Park();
         area = new Area();
-        visitor = new Visitor("Jo Malo");
-        staff = new Staff("Robert Muldoon");
-        animalAttraction = new Terrestrial("Velocirapter", DietType.CARNIVORE);
+        visitor = new Visitor("Jo Malo", 2500);
+        staff = new Staff("Robert Muldoon", 2500);
+        animalAttraction = new Terrestrial("Velocirapter", DietType.CARNIVORE, 2000);
         originArea = new Area();
         destinationArea = new Area();
     }

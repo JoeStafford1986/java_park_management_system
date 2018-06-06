@@ -27,17 +27,17 @@ public class AreaTest {
     public void before() {
         area = new Area();
         enclosedPaddock = new Paddock(true);
-        visitor = new Visitor("Duncan Marjoribanks");
-        staff = new Staff("John Hammond");
+        visitor = new Visitor("Duncan Marjoribanks", 2500);
+        staff = new Staff("John Hammond", 2000);
         originEnclosedPaddock = new Paddock(true);
         destinationEnclosedPaddock = new Paddock(true);
         destinationNonEnclosedPaddock = new Paddock(false);
-        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE);
-        herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE);
-        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE);
-        carnivoreTerrestrial3 = new Terrestrial("Velociraptor", DietType.CARNIVORE);
-        carnivoreAvian1 = new Avian("Sinosauropteryx", DietType.CARNIVORE);
+        herbivoreTerrestrial1 = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000);
+        herbivoreTerrestrial2 = new Terrestrial("Brontosaurus", DietType.HERBIVORE, 20000);
+        carnivoreTerrestrial1 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
+        carnivoreTerrestrial2 = new Terrestrial("Giganotosaurus", DietType.CARNIVORE, 20000);
+        carnivoreTerrestrial3 = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000);
+        carnivoreAvian1 = new Avian("Sinosauropteryx", DietType.CARNIVORE, 1000);
     }
 
     @Test
@@ -155,6 +155,4 @@ public class AreaTest {
         area.transferAnimalAttractionBetweenPaddocks(carnivoreAvian1, originEnclosedPaddock, destinationNonEnclosedPaddock);
         assertEquals(0, destinationEnclosedPaddock.getAnimalAttractionsCount());
     }
-
-
 }
