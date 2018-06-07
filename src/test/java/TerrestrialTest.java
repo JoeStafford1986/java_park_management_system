@@ -323,16 +323,6 @@ public class TerrestrialTest {
         assertEquals(0, carnivoreTerrestrial.getStomachCount());
     }
 
-    @Test
-    public void cantSurviveMultipleDays() {
-        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
-        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
-        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
-        carnivoreTerrestrial.digestFood(2);
-        assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
-        assertEquals(1, carnivoreTerrestrial.getStomachCount());
-    }
-
     //Escaping Tests
 
     @Test
