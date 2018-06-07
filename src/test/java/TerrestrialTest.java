@@ -295,4 +295,26 @@ public class TerrestrialTest {
         assertEquals(200, carnivoreTerrestrial.getCaloricContentInStomach());
         assertEquals(2, carnivoreTerrestrial.getStomachCount());
     }
+
+    @Test
+    public void canSurviveMultipleDays() {
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.digestFood(2);
+        assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
+
+    @Test
+    public void cantSurviveMultipleDays() {
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
+        carnivoreTerrestrial.digestFood(2);
+        assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
 }
