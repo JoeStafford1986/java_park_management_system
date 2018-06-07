@@ -54,6 +54,11 @@ public class TerrestrialTest {
     }
 
     @Test
+    public void canGetEnraged() {
+
+    }
+
+    @Test
     public void checkStomachStartsEmpty() {
         assertEquals(0, omnivoreTerrestrial.getStomachCount());
     }

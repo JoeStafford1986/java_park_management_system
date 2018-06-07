@@ -10,6 +10,7 @@ public abstract class AnimalAttraction implements IEdible {
     private DietType diet;
     private int caloricContent;
     private int requiredDailyCalories;
+    private boolean enraged;
     private boolean plantBased;
     private ArrayList<IEdible> stomach;
 
@@ -65,32 +66,6 @@ public abstract class AnimalAttraction implements IEdible {
         return allCalories;
     }
 
-    public void satiateAppetite(int hours) {
-        for (int i = 0; i < hours; i++) {
-            if (this.getCaloricContentInStomach() < this.requiredDailyCalories) {
-                this.attemptEscape();
-                return;
-            } else {
-                int caloriesNeeded = this.requiredDailyCalories;
-                ArrayList<IEdible> digestedFood = new ArrayList<>();
-                for (IEdible foodInStomach : this.stomach) {
-                    caloriesNeeded -= foodInStomach.getCaloricContent();
-                    if (foodInStomach.getCaloricContent() <= (this.requiredDailyCalories - caloriesNeeded)) {
-                        digestedFood.add(foodInStomach);
-                    } else {
-                        foodInStomach.setCaloricContent(this.requiredDailyCalories - caloriesNeeded);
-                        return;
-                    }
-                }
-                for (IEdible foodInStomach : digestedFood) {
-                    if (digestedFood.contains(foodInStomach)) {
-                        this.stomach.remove(foodInStomach);
-                    }
-                }
-            }
-        }
-    }
-
     public void digestFood(int days) {
         for (int i = 0; i < days; i++) {
             if (this.getCaloricContentInStomach() < this.requiredDailyCalories) {
@@ -116,7 +91,7 @@ public abstract class AnimalAttraction implements IEdible {
         }
     }
 
-    public boolean attemptEscape() {
-        return true;
+    public String attemptEscape() {
+        return "I'm escaping!";
     }
 }
