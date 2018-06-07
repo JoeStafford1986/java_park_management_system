@@ -82,9 +82,9 @@ public abstract class AnimalAttraction implements IEdible {
                         foodInStomach.setCaloricContent(foodInStomach.getCaloricContent() - caloriesNeeded);
                     }
                 }
-                for (IEdible foodInStomach : digestedFood) {
-                    if (digestedFood.contains(foodInStomach)) {
-                        this.stomach.remove(foodInStomach);
+                for (IEdible foodInDigestionTract : digestedFood) {
+                    if (digestedFood.contains(foodInDigestionTract)) {
+                        this.stomach.remove(foodInDigestionTract);
                     }
                 }
             }

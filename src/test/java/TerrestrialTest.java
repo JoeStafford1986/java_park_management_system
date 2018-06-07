@@ -21,15 +21,15 @@ public class TerrestrialTest {
 
     @Before
     public void dinosaur() {
-        omnivoreTerrestrial = new Terrestrial("Gallimimus", DietType.OMNIVORE, 1000, 2000);
-        herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000, 2000);
-        carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000, 2000);
-        plantBasedFeed = new Feed(true, 500);
-        nonPlantBasedFeed = new Feed(false, 500);
-        plantBasedIEdible = new Feed(true, 500);
-        nonPlantBasedIEdible = new Feed(false, 500);
-        visitor = new Visitor("Euan Bell", 3500);
-        staff = new Staff("Dennis Nedry", 4500);
+        omnivoreTerrestrial = new Terrestrial("Gallimimus", DietType.OMNIVORE, 1000, 200);
+        herbivoreTerrestrial = new Terrestrial("Stegosaurus", DietType.HERBIVORE, 10000, 200);
+        carnivoreTerrestrial = new Terrestrial("Velociraptor", DietType.CARNIVORE, 2000, 200);
+        plantBasedFeed = new Feed(true, 100);
+        nonPlantBasedFeed = new Feed(false, 100);
+        plantBasedIEdible = new Feed(true, 100);
+        nonPlantBasedIEdible = new Feed(false, 100);
+        visitor = new Visitor("Euan Bell", 100);
+        staff = new Staff("Dennis Nedry", 100);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class TerrestrialTest {
 
     @Test
     public void canGetDailyRequiredCalories() {
-        assertEquals(2000, omnivoreTerrestrial.getRequiredDailyCalories());
+        assertEquals(200, omnivoreTerrestrial.getRequiredDailyCalories());
     }
 
     @Test
@@ -124,17 +124,19 @@ public class TerrestrialTest {
         assertEquals(1, omnivoreTerrestrial.getStomachCount());
     }
 
+    //Omnivore Stomach and Calorie Tests
+
     @Test
     public void canGetAllCaloricContentInOmnivoreStomachSingleIEdible() {
         omnivoreTerrestrial.eat(staff);
-        assertEquals(4500, omnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(100, omnivoreTerrestrial.getCaloricContentInStomach());
     }
 
     @Test
     public void canGetAllCaloricContentInOmnivoreStomachMultipleIEdible() {
         omnivoreTerrestrial.eat(staff);
         omnivoreTerrestrial.eat(plantBasedFeed);
-        assertEquals(5000, omnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(200, omnivoreTerrestrial.getCaloricContentInStomach());
     }
 
     @Test
@@ -186,10 +188,12 @@ public class TerrestrialTest {
         assertEquals(0, herbivoreTerrestrial.getStomachCount());
     }
 
+    //Herbivore Stomach and Calorie Tests
+
     @Test
     public void canGetAllCaloricContentInHerbivoreStomachSingleIEdible() {
         herbivoreTerrestrial.eat(plantBasedFeed);
-        assertEquals(500, herbivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(100, herbivoreTerrestrial.getCaloricContentInStomach());
     }
 
     @Test
@@ -197,7 +201,7 @@ public class TerrestrialTest {
         herbivoreTerrestrial.eat(staff);
         herbivoreTerrestrial.eat(plantBasedIEdible);
         herbivoreTerrestrial.eat(plantBasedFeed);
-        assertEquals(1000, herbivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(200, herbivoreTerrestrial.getCaloricContentInStomach());
     }
 
     @Test
@@ -249,10 +253,12 @@ public class TerrestrialTest {
         assertEquals(1, carnivoreTerrestrial.getStomachCount());
     }
 
+    //Carnivore Stomach and Calorie Tests
+
     @Test
     public void canGetAllCaloricContentInCarnivoreStomachSingleIEdible() {
         carnivoreTerrestrial.eat(staff);
-        assertEquals(4500, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
     }
 
     @Test
@@ -260,7 +266,7 @@ public class TerrestrialTest {
         carnivoreTerrestrial.eat(staff);
         carnivoreTerrestrial.eat(visitor);
         carnivoreTerrestrial.eat(plantBasedFeed);
-        assertEquals(8000, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(200, carnivoreTerrestrial.getCaloricContentInStomach());
     }
 
     @Test
@@ -274,8 +280,8 @@ public class TerrestrialTest {
     public void canDigestFoodEnoughCalories() {
         carnivoreTerrestrial.eat(staff);
         carnivoreTerrestrial.digestFood(1);
-        assertEquals(2500, staff.getCaloricContent());
-        assertEquals(2500, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(100, staff.getCaloricContent());
+        assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
         assertEquals(1, carnivoreTerrestrial.getStomachCount());
     }
 
@@ -286,7 +292,7 @@ public class TerrestrialTest {
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
         carnivoreTerrestrial.digestFood(1);
-        assertEquals(0, carnivoreTerrestrial.getCaloricContentInStomach());
-        assertEquals(0, carnivoreTerrestrial.getStomachCount());
+        assertEquals(200, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(2, carnivoreTerrestrial.getStomachCount());
     }
 }
