@@ -277,8 +277,10 @@ public class TerrestrialTest {
     //Digestion Tests
 
     @Test
-    public void canDigestFoodEnoughCalories() {
+    public void canDigestFood() {
         carnivoreTerrestrial.eat(staff);
+        carnivoreTerrestrial.eat(visitor);
+        carnivoreTerrestrial.eat(nonPlantBasedIEdible);
         carnivoreTerrestrial.digestFood(1);
         assertEquals(100, staff.getCaloricContent());
         assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
@@ -286,7 +288,7 @@ public class TerrestrialTest {
     }
 
     @Test
-    public void canDigestFoodMultipleSmallMealsEnoughCalories() {
+    public void canDigestFoodMultipleSmallMeals() {
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
@@ -316,5 +318,12 @@ public class TerrestrialTest {
         carnivoreTerrestrial.digestFood(2);
         assertEquals(100, carnivoreTerrestrial.getCaloricContentInStomach());
         assertEquals(1, carnivoreTerrestrial.getStomachCount());
+    }
+
+    //Escaping Tests
+
+    @Test
+    public void getEscaping() {
+        assertEquals("I'm escaping!", carnivoreTerrestrial.attemptEscape());
     }
 }
