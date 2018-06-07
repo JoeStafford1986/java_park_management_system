@@ -311,6 +311,19 @@ public class TerrestrialTest {
     }
 
     @Test
+    public void willStarveOverMultipleDays() {
+        Feed bigFood = new Feed(false, 400);
+        carnivoreTerrestrial.eat(bigFood);
+        carnivoreTerrestrial.digestFood(1);
+        carnivoreTerrestrial.digestFood(1);
+        carnivoreTerrestrial.digestFood(1);
+        carnivoreTerrestrial.digestFood(1);
+        carnivoreTerrestrial.digestFood(1);
+        assertEquals(0, carnivoreTerrestrial.getCaloricContentInStomach());
+        assertEquals(0, carnivoreTerrestrial.getStomachCount());
+    }
+
+    @Test
     public void cantSurviveMultipleDays() {
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
         carnivoreTerrestrial.eat(nonPlantBasedIEdible);
